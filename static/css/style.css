@@ -73,6 +73,8 @@ body {
 
 /*Menu navigation*/
 .box-menu {
+  flex-grow: 1;
+  justify-content: center;
   list-style: none;
   display: flex; }
 
@@ -83,12 +85,27 @@ body {
 
 /*User data*/
 .user-data {
+  display: flex;
   margin-left: 30px; }
 
+/*Share image*/
 .user-data__img-search {
   width: 24px;
   height: 24px;
   background-image: url("../images/header/ic-search.svg"); }
+
+/*Avatar*/
+.user-avatar {
+  width: 25px;
+  height: 25px;
+  margin-left: 23px;
+  background-image: url("../images/header/ic-user.svg");
+  background-position: center; }
+
+.user-name {
+  min-width: 104px;
+  color: #009cde;
+  margin-left: 11px; }
 
 a {
   color: #768692;
