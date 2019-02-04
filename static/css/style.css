@@ -80,7 +80,9 @@ body {
 
 .box-menu__link {
   display: block;
-  margin-left: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 31px;
   text-transform: uppercase; }
 
 /*User data*/
@@ -90,6 +92,7 @@ body {
 
 /*Share image*/
 .user-data__img-search {
+  cursor: pointer;
   width: 24px;
   height: 24px;
   background-image: url("../images/header/ic-search.svg"); }
@@ -106,6 +109,14 @@ body {
   min-width: 104px;
   color: #009cde;
   margin-left: 11px; }
+
+/*Triangle*/
+.box-image {
+  width: 100%;
+  min-height: 882px;
+  background-image: url("../images/header/bg-football-p-1.png");
+  background-repeat: no-repeat;
+  background-size: 100%; }
 
 a {
   color: #768692;
