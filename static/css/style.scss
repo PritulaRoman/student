@@ -27,6 +27,7 @@ body{
 /*color variables*/
 $cerulean-color: #009cde;
 $royal-red-color: #d0006f;
+
 /*Header*/
 .box-bands {
 	display: flex;
@@ -69,6 +70,31 @@ $royal-red-color: #d0006f;
 
 .box-bands__sorce--open-sorce {
 	min-width: 145px;
+}
+/*Navigation*/
+.box-navigation {
+	display: flex;
+	padding: 15px 30px;
+}
+/*Navigation Logo*/
+.box-navigation__img {
+	display: block;
+	min-width: 181px;
+	min-height: 42px;
+	background-image: url("../images/header/tm-developer-logo-p-1.svg");
+	background-repeat: no-repeat;
+}
+/*Menu navigation*/
+.box-menu {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.box-menu__link {
+	display: block;
+	margin-left: 30px;
+	text-transform: uppercase;
 }
 
 a {
