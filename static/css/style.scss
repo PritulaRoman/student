@@ -128,14 +128,35 @@ $royal-red-color: #d0006f;
 	margin-left: 11px;
 }
 
-/*Triangle*/
+
 .box-image {
+	position: relative;
 	width: 100%;
 	min-height: 882px;
 	background-image: url("../images/header/bg-football-p-1.png");
 	background-repeat: no-repeat;
 	background-size: 100%; 
+}
 
+/*Triangle*/
+.box-image::before,
+.box-image::after {
+	position: absolute;
+	content:"";
+	width: 0;
+	height: 0;
+	left: 0;
+}
+
+.box-image::before {
+	border-right: 1694px solid transparent;
+    border-top: 128px solid #fff;
+}
+
+.box-image::after {
+	bottom: 0;
+	border-left: 1694px solid #fff;
+    border-top: 128px solid transparent;
 }
 
 
