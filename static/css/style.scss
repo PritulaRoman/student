@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face{
+	font-family: Roboto; /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
+	font-style: normal;
+	font-weight: normal;
+	src: local(Roboto), url('static/fonts/roboto/Roboto.ttf');
+}
+
+@font-face{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	src: url('static/fonts/roboto/Robotobold.ttf');
+}
+
+body{
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #768692;
+	line-height: 1.5;
+	text-align: center;
+}
+/*color variables*/
+$cerulean-color: #009cde;
+$royal-red-color: #d0006f;
+/*Header*/
+.box-bands {
+	display: flex;
+	justify-content: center;
+	background: #768692;
+	min-height: 8px;
+}
+
+.box-bands__accent {
+	background: $cerulean-color;
+}
+
+.box-bands__accent--products {
+	min-width: 184px;	
+}
+
+.box-bands__accent--partners {
+	min-width: 111px;
+	opacity: 0.1;
+}
+ 
+.box-bands__accent--support {
+	min-width: 103px;
+	opacity: 0.2;
+}
+
+.box-bands__sorce {
+	background: $royal-red-color;
+}
+
+.box-bands__sorce--blog {
+	min-width: 85px;
+	opacity: 0.2;
+}
+
+.box-bands__sorce--event {
+	min-width: 90px;
+	opacity: 0.1;
+}
+
+.box-bands__sorce--open-sorce {
+	min-width: 145px;
+}
+
+a {
+	color: #768692;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #009cde;
+}
+
+.container{
+	display: flex;
+	width: 65.8%;
+	margin: 0 auto;
+	justify-content: space-between;
+	max-width: 1500px;
+}
+
+.banner{
+	width: 28.9%;
+}
+
+.wrapper{
+	height: 100px;
+	margin-bottom: 50px;
+}
+
+.block_icon{
+	display: block;
+	margin: 0 auto;
+}
+
+.top{
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.33;
+}
+
+.middle{
+	margin: 24px 0 24px 0;
+}
+
+.bottom{
+	color: #009cde;
+}
+
+.banner_title{
+	display: flex;
+	width: 65.8%;
+	margin: 0 auto;
+	justify-content: center;
+	border-bottom: 2px solid rgba(118, 134, 146, 0.4);
+}
+
+.block_title{
+	font-size: 36px;
+	color: #414141;
+	line-height: 1.33;
+	font-weight: bold;
+	margin: 96px 0 24px 0;
+}
+
+.container_distribution{
+	display: flex;
+	width: 65.8%;
+	margin: 0px auto;
+	justify-content: space-between;
+}
+
+.partners_distribution{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	width: 50%;
+	height: 206px;
+	margin: 48px 0 48px 0;
+	border-right: 2px solid rgba(118, 134, 146, 0.4);
+}
+
+.distribution_wrapper{
+	width: 26%;
+}
+
+.distribution_icon{
+	display: block; /*при зменшенні екрана блоки вилізають за "родітельский" блок*/
+}
+
+.information_partners{
+	width: 50%;
+}
+
+.about_distribution{
+	width: 76.1%;
+	margin: 107px 0 0 28px;
+	text-align: left;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.29;
+}
