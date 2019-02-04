@@ -60,26 +60,35 @@ body {
 /*Navigation*/
 .box-navigation {
   display: flex;
-  padding: 15px 30px; }
+  align-items: center;
+  padding: 15px 30px;
+  background-repeat: no-repeat; }
 
 /*Navigation Logo*/
 .box-navigation__img {
   display: block;
   min-width: 181px;
   min-height: 42px;
-  background-image: url("../images/header/tm-developer-logo-p-1.svg");
-  background-repeat: no-repeat; }
+  background-image: url("../images/header/tm-developer-logo-p-1.svg"); }
 
 /*Menu navigation*/
 .box-menu {
   list-style: none;
-  display: flex;
-  align-items: center; }
+  display: flex; }
 
 .box-menu__link {
   display: block;
   margin-left: 30px;
   text-transform: uppercase; }
+
+/*User data*/
+.user-data {
+  margin-left: 30px; }
+
+.user-data__img-search {
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/header/ic-search.svg"); }
 
 a {
   color: #768692;
