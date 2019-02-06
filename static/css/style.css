@@ -15,7 +15,7 @@
   font-weight: bold;
   src: url("static/fonts/roboto/Robotobold.ttf"); }
 body {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16px;
   color: #768692;
   line-height: 1.5;
@@ -61,15 +61,15 @@ body {
 .box-navigation {
   display: flex;
   align-items: center;
-  padding: 15px 30px;
-  background-repeat: no-repeat; }
+  padding: 15px 30px; }
 
 /*Navigation Logo*/
 .box-navigation__img {
   display: block;
   min-width: 181px;
   min-height: 42px;
-  background-image: url("../images/header/tm-developer-logo-p-1.svg"); }
+  background-image: url("../images/header/tm-developer-logo-p-1.svg");
+  background-repeat: no-repeat; }
 
 /*Menu navigation*/
 .box-menu {
@@ -79,8 +79,11 @@ body {
   display: flex; }
 
 .box-menu__link {
+  color: #b7c9d3;
   display: block;
-  margin-left: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 31px;
   text-transform: uppercase; }
 
 /*User data*/
@@ -90,9 +93,11 @@ body {
 
 /*Share image*/
 .user-data__img-search {
+  cursor: pointer;
   width: 24px;
   height: 24px;
-  background-image: url("../images/header/ic-search.svg"); }
+  background-image: url("../images/header/ic-search.svg");
+  background-repeat: no-repeat; }
 
 /*Avatar*/
 .user-avatar {
@@ -100,12 +105,62 @@ body {
   height: 25px;
   margin-left: 23px;
   background-image: url("../images/header/ic-user.svg");
+  background-repeat: no-repeat;
   background-position: center; }
 
 .user-name {
   min-width: 104px;
   color: #009cde;
   margin-left: 11px; }
+
+.box-image {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  width: 100%;
+  min-height: 882px;
+  background-image: url("../images/header/bg-football-p-1.png");
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+/*Triangle*/
+.box-image::before,
+.box-image::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0; }
+
+.box-image::before {
+  border-right: 1694px solid transparent;
+  border-top: 128px solid #fff; }
+
+.box-image::after {
+  bottom: 0;
+  border-left: 1694px solid #fff;
+  border-top: 128px solid transparent; }
+
+.box-wrapper-header-content {
+  padding: 208px 150px 20px 150px; }
+
+/*Title*/
+.box-title {
+  line-height: 1.25;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 264px;
+  width: 848px;
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 48px; }
+
+/*Text header*/
+.box-image__text {
+  font-size: 18px;
+  width: 751px;
+  opacity: 0.7; }
 
 a {
   color: #768692;
