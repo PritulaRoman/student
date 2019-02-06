@@ -32,82 +32,66 @@ $primary-color: #fff;
 /*Header*/
 .box-bands {
 	display: flex;
-	justify-content: center;
-	background: #768692;
-	min-height: 8px;
-}
-
-.box-bands__accent {
-	background: $cerulean-color;
-}
-
-.box-bands__accent--products {
-	min-width: 184px;	
-}
-
-.box-bands__accent--partners {
-	min-width: 111px;
-	opacity: 0.1;
-}
- 
-.box-bands__accent--support {
-	min-width: 103px;
-	opacity: 0.2;
-}
-
-.box-bands__sorce {
-	background: $royal-red-color;
-}
-
-.box-bands__sorce--blog {
-	min-width: 85px;
-	opacity: 0.2;
-}
-
-.box-bands__sorce--event {
-	min-width: 90px;
-	opacity: 0.1;
-}
-
-.box-bands__sorce--open-sorce {
-	min-width: 145px;
-}
-/*Navigation*/
-.box-navigation {
-	display: flex;
-	align-items: center;
-	padding: 15px 30px;
-	
-}
-
-/*Navigation Logo*/
-.box-navigation__img {
-	display: block;
-	min-width: 181px;
+	justify-content: space-between;
 	min-height: 42px;
-	background-image: url("../images/header/tm-developer-logo-p-1.svg");
-	background-repeat: no-repeat;
+}
+
+/*Logo*/
+.box-logo {
+	flex-grow: 1;
+	display: block;
+	border-top: 8px solid #768692;
+	padding: 15px 150px 0 30px;
+	min-width: 181px;
+}
+
+.box-logo__img {
+	display: block;
 }
 /*Menu navigation*/
 .box-menu {
-	flex-grow: 1;
 	justify-content: center;
-	list-style: none;
 	display: flex;
 }
 
 .box-menu__link {
+	padding: 27px 15px 0 15px;
 	color: #b7c9d3;
 	display: block;
 	font-size: 15px;
 	font-weight: bold;
-	margin-left: 31px;
 	text-transform: uppercase;
 }
+
+.box-menu__link--products {
+	border-top: 8px solid $cerulean-color;
+}
+
+.box-menu__link--partners {
+	border-top: 8px solid #158CD2;
+}
+
+.box-menu__link--support {
+	border-top: 8px solid #2A7CC7;
+}
+
+.box-menu__link--blogs {
+	border-top: 8px solid #A61F84;
+}
+
+.box-menu__link--events {
+	border-top: 8px solid #BA1079;
+}
+
+.box-menu__link--open-source {
+	border-top: 8px solid #D0006F;
+}
+
 /*User data*/
 .user-data {
 	display: flex;
-	margin-left: 30px;
+	justify-content: flex-end;
+	padding-right: 30px; 
 }
 /*Share image*/
 .user-data__img-search {
@@ -118,7 +102,7 @@ $primary-color: #fff;
 	background-repeat: no-repeat;
 }
 /*Avatar*/
-.user-avatar {
+.user-data__avatar {
 	width: 25px;
 	height: 25px;
 	margin-left: 23px;
@@ -127,7 +111,7 @@ $primary-color: #fff;
 	background-position: center;
 }
 
-.user-name {
+.user-data__name {
 	min-width: 104px;
 	color: #009cde;
 	margin-left: 11px;
@@ -156,13 +140,13 @@ $primary-color: #fff;
 }
 
 .box-image::before {
-	border-right: 1694px solid transparent;
+	border-right: 1728px solid transparent;
     border-top: 128px solid $primary-color;
 }
 
 .box-image::after {
 	bottom: 0;
-	border-left: 1694px solid $primary-color;
+	border-left: 1728px solid $primary-color;
     border-top: 128px solid transparent;
 }
 
