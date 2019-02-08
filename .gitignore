@@ -1,5 +1,5 @@
 #IDE
 /.idea
-/static/css/style.css.map
-/static/css/style.min.css
-/static/css/style.css
+/static/css/*.css
+/static/css/*.min.css
+/static/css/*.css.map
