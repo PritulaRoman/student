@@ -25,7 +25,7 @@ body{
 }
 /*Vitaliy's work*/
 a {
-	color: #768692;
+	color: #009cde;
 	text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ $primary-color: #fff;
 .box-bg-image--player {
 	background-image: url("../images/content/bg-football-p-1.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%; 
+	background-size: 100%; 
 }
 
 .box-bg-image--game {
@@ -239,7 +239,14 @@ $primary-color: #fff;
 	margin-bottom: 72px;
 	background-image: url("../images/content/bg-baseball-p-1-a.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100%;
+}
+
+.box-bg-footer {
+	height: 484px;
+	background-image: url("../images/content/ic-footer-bg.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .content-bounder {
@@ -334,7 +341,6 @@ $primary-color: #fff;
 .box-btn__item {
 	box-sizing: border-box;
 	display: inline-block;
-	cursor: pointer;
 	margin-left: 24px;
 	height: 48px;
 	text-transform: uppercase;
@@ -345,12 +351,13 @@ $primary-color: #fff;
 	padding: 15px 24px;
 }
 
-.box-btn__item--api {
+.box-btn__item--active {
 	border: 2px solid $primary-color;
 	color: $cerulean-color;
+	cursor: pointer;
 }
 
-.box-btn__item--explore-information {
+.box-btn__item--disabled {
 	border: 2px solid rgba(255, 255, 255, 0.7);
 	color: rgba(255, 255, 255, 0.7);
 	background: rgba(255, 255, 255, 0.1)
@@ -408,8 +415,7 @@ $primary-color: #fff;
 }
 
 .card {
-	width: calc(25% - 28px);
-	max-width: calc(25% - 28px);
+	flex: 1;
 	margin-left: 28px;
 }
 
@@ -451,20 +457,22 @@ $primary-color: #fff;
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 16px;
+	&--footer {
+		color: #fff;
+		text-align: left;
+	}
 }
 
 .card__text {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 
 .card .card__text:last-child {
 	margin-bottom: 0;
 }
 
-.cards__text--link {
-	display: block;
-	color: $cerulean-color;
-	justify-content: flex-start;
+.card__text--footer {
+	color: rgba(255, 255, 255, 0.9);
 }
 
 /*Networks*/
@@ -476,7 +484,10 @@ $primary-color: #fff;
 
 .box-networks__img {
 	display: block;
-	margin-left: 33px;
+	min-height: 20px;
+	min-width: 20px;
+	max-width: 65px;
+	max-height: 27px;
 	opacity: 0.3;
 }
 
@@ -486,33 +497,14 @@ $primary-color: #fff;
 	}
 }
 
-.box-networks__img--facebook {
-	height: 20px;
-	width: 20px;
-	background-image: url("../images/network/facebook.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	
+.box-networks__img--active {
+	opacity: 1;
 }
 
-.box-networks__img--groupon {
-	height: 27px;
-	width: 66px;
-	background-image: url("../images/network/ic-groupon-logo.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+.left-space {
+	margin-left: 33px;
 }
 
-.box-networks__img--hub {
-	height: 25px;
-	width: 65px;
-	background-image: url("../images/network/hub-network-logo.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
 
 /*Proposal cards*/
 .box-proposal {
@@ -545,39 +537,13 @@ $primary-color: #fff;
 }
 
 .box-link-wrapper {
-	.box-link-image {
+	.left-space {
 		&:first-child {
 			margin-left: 0;
 		}
 	}
 }
 
-.box-link-image {
-	height: 22px;
-	width: 22px;
-	margin-left: 30px;
-}
-
-.box-link-image--twitter {
-	background-image: url("../images/network/twitter-blue.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-.box-link-image--facebook {
-	background-image: url("../images/network/facebook-dark-blue.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-.box-link-image--medium {
-	background-image: url("../images/network/medium.svg");
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
 /*Tech card*/
 .box-proposal__links--tech {
 	border: 1px solid rgba(118, 134, 146, 0.2);
@@ -634,5 +600,8 @@ $primary-color: #fff;
 	margin-bottom: 16px;
 }
 
+/*Footer*/
 
-
+.box-bg-footer .box-cards:last-child {
+	margin-bottom: 0;
+}
