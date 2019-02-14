@@ -7,14 +7,16 @@
 	font-family: Roboto; /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
 	font-style: normal;
 	font-weight: normal;
-	src: local(Roboto), url('static/fonts/roboto/Roboto.ttf');
+	src: url('static/fonts/roboto/Roboto.ttf') format('truetype'),
+		 url('static/fonts/roboto/Roboto.woff') format('woff');
 }
 
 @font-face{
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	src: url('static/fonts/roboto/Robotobold.ttf');
+	src: url('static/fonts/roboto/Robotobold.ttf') format('truetype'),
+		 url('static/fonts/roboto/Robotobold.woff') format('woff');
 }
 
 body{
