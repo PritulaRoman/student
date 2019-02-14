@@ -31,6 +31,6 @@ axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
   })
 
   .catch((error) => {
-  	console.log(error);
+  	$('.box-cards').html("Sorry this API not available!!!");
   })
 
