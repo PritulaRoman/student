@@ -7,16 +7,16 @@
 	font-family: Roboto; /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
 	font-style: normal;
 	font-weight: normal;
-	src: url('static/fonts/roboto/Roboto.ttf') format('truetype'),
-		 url('static/fonts/roboto/Roboto.woff') format('woff');
+	src: url('../fonts/roboto/Roboto.ttf') format('truetype'),
+		 url('../fonts/roboto/Roboto.woff') format('woff');
 }
 
 @font-face{
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	src: url('static/fonts/roboto/Robotobold.ttf') format('truetype'),
-		 url('static/fonts/roboto/Robotobold.woff') format('woff');
+	src: url('../fonts/roboto/Robotobold.ttf') format('truetype'),
+		 url('../fonts/roboto/Robotobold.woff') format('woff');
 }
 
 body{
@@ -429,12 +429,12 @@ $primary-color: #fff;
 	width: 92px;
 	height: 92px;
 	margin-bottom: 26px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .card__img--api {
 	background-image: url("../images/cards/ic-api.svg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 }
 
 .card__img--solution {
