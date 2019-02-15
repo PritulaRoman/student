@@ -155,36 +155,39 @@ $primary-color: #fff;
 	display: flex;
 }
 
-.box-menu__link {
+.box-link {
 	padding: 27px 15px 0 15px;
-	color: #b7c9d3;
-	display: block;
-	font-size: 15px;
-	font-weight: bold;
-	text-transform: uppercase;
+
+	&__item {
+		color: #b7c9d3;
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
 }
 
-.box-menu__link--products {
+.box-link--products {
 	border-top: 8px solid $cerulean-color;
 }
 
-.box-menu__link--partners {
+.box-link--partners {
 	border-top: 8px solid #158CD2;
 }
 
-.box-menu__link--support {
+.box-link--support {
 	border-top: 8px solid #2A7CC7;
 }
 
-.box-menu__link--blogs {
+.box-link--blogs {
 	border-top: 8px solid #A61F84;
 }
 
-.box-menu__link--events {
+.box-link--events {
 	border-top: 8px solid #BA1079;
 }
 
-.box-menu__link--open-source {
+.box-link--open-source {
 	border-top: 8px solid #D0006F;
 }
 
