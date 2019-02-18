@@ -33,6 +33,7 @@
 
 	  	$boxCards.html(cards);
 	  })
+	
 
 	  .catch((error) => {
 	  	$boxCards.html("Sorry this API not available!!!");
