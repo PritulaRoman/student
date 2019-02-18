@@ -1,15 +1,18 @@
 (function() {
-	const getLinksCard = (cardLinks = []) => {
+	const getLinksCard = (cardLinks = [], linkCssClass = '') => {
 		return cardLinks.map(({ title, href }) => {
 			const link = `
 				<div class="card__text">
-					<a href="${href}">${title}</a>
+					<a href="${href}" class="${linkCssClass}">${title}</a>
 				</div>`;
 			return link;
 		}).join('');
 	}
 
 	const $boxCards = $('.js-box-cards');
+
+	// Footer cards class
+	const $boxFooterCards = $('.js-box-cards-footer');
 
 	axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
 	  .then((response) => {
@@ -32,11 +35,28 @@
 	  	}).join('');
 
 	  	$boxCards.html(cards);
+	  	return response;
+	  })
+	  // Footer cards
+	  .then((response) => {
+	  	const footerCardsInformation = response.data.results;
+	  	const footerCards = footerCardsInformation.map(({ title, links}) => {
+	  		const footerCardLinks = getLinksCard(links, 'card__text--footer');
+	  		const footerCard = `
+	  			<div class="card">
+					<div class="card__title card__title--footer">
+						${title}
+					</div>
+					${footerCardLinks}
+				</div>`;
+			return footerCard;
+	  	}).join('')
+	  	$boxFooterCards.html(footerCards);
 	  })
 	
 
 	  .catch((error) => {
-	  	$boxCards.html("Sorry this API not available!!!");
+	  	$boxCards.add($boxFooterCards).html("Sorry this API not available!!!");
 	  });
 })();
 
