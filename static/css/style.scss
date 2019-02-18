@@ -437,27 +437,6 @@ $primary-color: #fff;
 	background-size: 100% 100%;
 }
 
-.card__img--api {
-	background-image: url("../images/cards/ic-api.svg");
-}
-
-.card__img--solution {
-	background-image: url("../images/cards/ic-dropin.svg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
-.card__img--support {
-	background-image: url("../images/cards/ic-support.svg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
-.card__img--developer {
-	background-image: url("../images/cards/ic-developers.svg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
 .card__title {
 	color: #000;
 	text-align: center;
@@ -496,10 +475,12 @@ $primary-color: #fff;
 	max-width: 65px;
 	max-height: 27px;
 	opacity: 0.3;
+	transition: opacity 0.2s;
 }
 
 .box-networks__img {
 	&:hover {
+		
 		opacity: 1;
 	}
 }

@@ -16,7 +16,7 @@
 	  	const result = response.data.items;
 
 	  	const cards = result.map(({ image, title, description, links }) => {
-	  		const linksCard = getLinksCard(links);
+	  		const linksCard = getLinksCard(links || []);
 	  		
 			const card = `
 				<div class="card">
