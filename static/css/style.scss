@@ -477,7 +477,8 @@ $primary-color: #fff;
 }
 
 .card__text--footer {
-	color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.7);
+	transition: color 1s;
 }
 
 /*Networks*/
