@@ -14,6 +14,9 @@
 	// Footer cards class
 	const $boxFooterCards = $('.js-box-cards-footer');
 
+	// Header cards
+	const $boxHeaderCards = $('.box-menu');
+
 	axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
 	  .then((response) => {
 	  	const result = response.data.items;
@@ -50,8 +53,20 @@
 					${footerCardLinks}
 				</div>`;
 			return footerCard;
-	  	}).join('')
+	  	}).join('');
 	  	$boxFooterCards.html(footerCards);
+	  	return response;
+	  })
+	  .then((response) => {
+	  	const headerCardsData = response.data.header;
+	  	const headerCardes = headerCardsData.map(({ title, href, color}) => {
+	  		const headerCard = `
+	  			<div class="box-link" style='border-top: 8px solid ${ color }'>
+					<a href="${ href }" class="box-link__item" >${ title }</a>
+				</div>`;
+			return headerCard;
+	  	}).join('');
+	  	$boxHeaderCards.html(headerCardes);
 	  })
 	
 
