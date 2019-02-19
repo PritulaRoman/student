@@ -339,6 +339,7 @@ $primary-color: #fff;
 .box-btn__item--active {
 	border: 2px solid $primary-color;
 	color: $cerulean-color;
+	background: rgba(255, 255, 255, 1);
 }
 
 .box-btn__item.box-btn__item--explore-information .small-text{
