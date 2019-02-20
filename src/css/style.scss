@@ -42,49 +42,82 @@ $cerulean-color: #009cde;
 $royal-red-color: #d0006f;
 $primary-color: #fff;
 
+/*Break points for responsive design*/
+$break-small: 768px;
+
 /*Header*/
 .box-bands {
-	display: flex;
-	justify-content: space-between;
-	min-height: 42px;
+	display: block;
+	@media screen and (min-width: $break-small) {
+		display: flex;
+		justify-content: space-between;
+		min-height: 42px;
+	}
 }
 
 /*Logo*/
-.box-logo {
-	flex-grow: 1;
-	display: block;
-	border-top: 8px solid #768692;
-	padding: 15px 150px 0 30px;
-	min-width: 181px;
+.box-logo{
+	border-top: none;
+	height: 42px;
+	padding: 15px 0 0 15px;
+	@media screen and (min-width: $break-small) {
+		flex-grow: 1;
+		display: block;
+		border-top: 8px solid #768692;
+		min-width: 181px;
+		
+	}
+
 }
 
+
 .box-logo__img {
-	display: block;
+	display: inline-block;
 }
+
+.box-logo__link {
+	margin-left: 15px;
+}
+
 /*Menu navigation*/
 .box-menu {
-	justify-content: center;
+	margin-top: -57px;
 	display: flex;
+	@media screen and (min-width: $break-small) {
+		justify-content: center;
+		margin-top: 0;
+		
+	}
 }
 
 .box-link {
 	padding: 27px 15px 0 15px;
-
+	flex: 1;
 	&__item {
-		color: #b7c9d3;
-		display: block;
-		font-size: 15px;
-		font-weight: bold;
-		text-transform: uppercase;
-		transition: color easy-in-out 0.2s;
+		display: none;
+	}
+	@media screen and (min-width: $break-small) {
+		&__item {
+			color: #b7c9d3;
+			display: block;
+			font-size: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			transition: color easy-in-out 0.2s;
+		}
 	}
 }
 
 /*User data*/
 .user-data {
+	margin-top: -25px;
 	display: flex;
 	justify-content: flex-end;
-	padding-right: 30px; 
+	padding-right: 15px;
+	@media screen and (min-width: $break-small) {
+		margin-top: 0;
+		padding-right: 30px;
+	} 
 }
 /*Share image*/
 .user-data__img-search {
@@ -96,18 +129,27 @@ $primary-color: #fff;
 }
 /*Avatar*/
 .user-data__avatar {
+	background-image: url("../../static/images/header/ic-menu.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
 	width: 25px;
 	height: 25px;
 	margin-left: 23px;
-	background-image: url("../../static/images/header/ic-user.svg");
-	background-repeat: no-repeat;
-	background-position: center;
+	@media screen and (min-width: $break-small) {
+		background-image: url("../../static/images/header/ic-user.svg");
+	}
+	
 }
 
 .user-data__name {
-	min-width: 104px;
-	color: #009cde;
-	margin-left: 11px;
+	display: none;
+	@media screen and (min-width: $break-small) {
+		display: block;
+		min-width: 104px;
+		color: #009cde;
+		margin-left: 11px;
+	}
 }
 
 
