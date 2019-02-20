@@ -7,16 +7,16 @@
 	font-family: Roboto; /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
 	font-style: normal;
 	font-weight: normal;
-	src: url('../fonts/roboto/Roboto.ttf') format('truetype'),
-		 url('../fonts/roboto/Roboto.woff') format('woff');
+	src: url('../../static/fonts/roboto/Roboto.ttf') format('truetype'),
+		 url('../../static/fonts/roboto/Roboto.woff') format('woff');
 }
 
 @font-face{
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	src: url('../fonts/roboto/Robotobold.ttf') format('truetype'),
-		 url('../fonts/roboto/Robotobold.woff') format('woff');
+	src: url('../../static/fonts/roboto/Robotobold.ttf') format('truetype'),
+		 url('../../static/fonts/roboto/Robotobold.woff') format('woff');
 }
 
 body{
@@ -181,7 +181,7 @@ $primary-color: #fff;
 	cursor: pointer;
 	width: 24px;
 	height: 24px;
-	background-image: url("../images/header/ic-search.svg");
+	background-image: url("../../static/images/header/ic-search.svg");
 	background-repeat: no-repeat;
 }
 /*Avatar*/
@@ -189,7 +189,7 @@ $primary-color: #fff;
 	width: 25px;
 	height: 25px;
 	margin-left: 23px;
-	background-image: url("../images/header/ic-user.svg");
+	background-image: url("../../static/images/header/ic-user.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -211,7 +211,7 @@ $primary-color: #fff;
 }
 
 .box-bg-image--player {
-	background-image: url("../images/content/bg-football-p-1.png");
+	background-image: url("../../static/images/content/bg-football-p-1.png");
 	background-repeat: no-repeat;
 	background-size: 100%; 
 }
@@ -219,14 +219,14 @@ $primary-color: #fff;
 .box-bg-image--game {
 	height: 597px;
 	margin-bottom: 72px;
-	background-image: url("../images/content/bg-baseball-p-1-a.png");
+	background-image: url("../../static/images/content/bg-baseball-p-1-a.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .box-bg-footer {
 	height: 484px;
-	background-image: url("../images/content/ic-footer-bg.svg");
+	background-image: url("../../static/images/content/ic-footer-bg.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -352,7 +352,7 @@ $primary-color: #fff;
 	width: 16px;
 	height: 16px;
 	margin-left: 24px;
-	background-image: url("../images/content/ic-rightarrow.svg");
+	background-image: url("../../static/images/content/ic-rightarrow.svg");
 	background-repeat: no-repeat;
 }
 
@@ -524,7 +524,7 @@ $primary-color: #fff;
 .box-img-link--social-net {
 	width: 16px;
 	height: 13px;
-	background-image: url("../images/network/twitter-small.svg");
+	background-image: url("../../static/images/network/twitter-small.svg");
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -533,7 +533,7 @@ $primary-color: #fff;
 .box-img-link--tech {
 	width: 40px;
 	height: 40px;
-	background-image: url("../images/network/im-tech.png");
+	background-image: url("../../static/images/network/im-tech.png");
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;

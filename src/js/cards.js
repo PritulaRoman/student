@@ -1,14 +1,17 @@
-(function() {
-	const getLinksCard = (cardLinks = [], linkCssClass = '') => {
-		return cardLinks.map(({ title, href }) => {
-			const link = `
-				<div class="card__text">
-					<a href="${href}" class="${linkCssClass}">${title}</a>
-				</div>`;
-			return link;
-		}).join('');
-	}
+import $ from "jquery";
+import axios from "axios";
 
+const getLinksCard = (cardLinks = [], linkCssClass = '') => {
+	return cardLinks.map(({ title, href }) => {
+		const link = `
+			<div class="card__text">
+				<a href="${href}" class="${linkCssClass}">${title}</a>
+			</div>`;
+		return link;
+	}).join('');
+}
+
+export const buildCards = () => {
 	const $boxCards = $('.js-box-cards');
 
 	// Footer cards class
@@ -68,10 +71,11 @@
 	  	}).join('');
 	  	$boxHeaderCards.html(headerCardes);
 	  })
-	
+
 
 	  .catch((error) => {
 	  	$boxCards.add($boxFooterCards).html("Sorry this API not available!!!");
 	  });
-})();
+}		
+
 
