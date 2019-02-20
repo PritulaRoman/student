@@ -1,0 +1,27 @@
+{
+  "name": "student",
+  "version": "1.0.0",
+  "description": "`git clone https://github.com/PritulaRoman/student.git`",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PritulaRoman/student.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PritulaRoman/student/issues"
+  },
+  "homepage": "https://github.com/PritulaRoman/student#readme"
+}
