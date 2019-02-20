@@ -7,16 +7,16 @@
 	font-family: Roboto; /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
 	font-style: normal;
 	font-weight: normal;
-	src: url('../fonts/roboto/Roboto.ttf') format('truetype'),
-		 url('../fonts/roboto/Roboto.woff') format('woff');
+	src: url('../../static/fonts/roboto/Roboto.ttf') format('truetype'),
+		 url('../../static/fonts/roboto/Roboto.woff') format('woff');
 }
 
 @font-face{
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: bold;
-	src: url('../fonts/roboto/Robotobold.ttf') format('truetype'),
-		 url('../fonts/roboto/Robotobold.woff') format('woff');
+	src: url('../../static/fonts/roboto/Robotobold.ttf') format('truetype'),
+		 url('../../static/fonts/roboto/Robotobold.woff') format('woff');
 }
 
 body{
@@ -25,7 +25,7 @@ body{
 	color: #768692;
 	line-height: 1.5;
 }
-
+/*Vitaliy's work*/
 a {
 	color: #009cde;
 	text-decoration: none;
@@ -35,57 +35,36 @@ a:hover {
 	color: #009cde;
 }
 
+/*Alona's work*/
 
 /*color variables*/
 $cerulean-color: #009cde;
 $royal-red-color: #d0006f;
 $primary-color: #fff;
-/*Break points for responsive design*/
-
-$break-small: 768px;
 
 /*Header*/
 .box-bands {
-	display: block;
-	@media screen and (min-width: $break-small) {
-		display: flex;
-		justify-content: space-between;
-		min-height: 42px;
-	}
+	display: flex;
+	justify-content: space-between;
+	min-height: 42px;
 }
 
 /*Logo*/
-.box-logo{
-	border-top: none;
-	height: 42px;
-	padding: 15px 0 0 15px;
-	@media screen and (min-width: $break-small) {
-		flex-grow: 1;
-		display: block;
-		border-top: 8px solid #768692;
-		min-width: 181px;
-		
-	}
-
+.box-logo {
+	flex-grow: 1;
+	display: block;
+	border-top: 8px solid #768692;
+	padding: 15px 150px 0 30px;
+	min-width: 181px;
 }
-
 
 .box-logo__img {
-	display: inline-block;
+	display: block;
 }
-
-.box-logo__link {
-	margin-left: 15px;
-}
-
 /*Menu navigation*/
 .box-menu {
-	margin-top: -57px;
+	justify-content: center;
 	display: flex;
-	@media screen and (min-width: $break-small) {
-		justify-content: center;
-		
-	}
 }
 
 .box-link {
@@ -112,7 +91,7 @@ $break-small: 768px;
 	cursor: pointer;
 	width: 24px;
 	height: 24px;
-	background-image: url("../images/header/ic-search.svg");
+	background-image: url("../../static/images/header/ic-search.svg");
 	background-repeat: no-repeat;
 }
 /*Avatar*/
@@ -120,7 +99,7 @@ $break-small: 768px;
 	width: 25px;
 	height: 25px;
 	margin-left: 23px;
-	background-image: url("../images/header/ic-user.svg");
+	background-image: url("../../static/images/header/ic-user.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -142,7 +121,7 @@ $break-small: 768px;
 }
 
 .box-bg-image--player {
-	background-image: url("../images/content/bg-football-p-1.png");
+	background-image: url("../../static/images/content/bg-football-p-1.png");
 	background-repeat: no-repeat;
 	background-size: 100%; 
 }
@@ -150,14 +129,14 @@ $break-small: 768px;
 .box-bg-image--game {
 	height: 597px;
 	margin-bottom: 72px;
-	background-image: url("../images/content/bg-baseball-p-1-a.png");
+	background-image: url("../../static/images/content/bg-baseball-p-1-a.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .box-bg-footer {
 	height: 484px;
-	background-image: url("../images/content/ic-footer-bg.svg");
+	background-image: url("../../static/images/content/ic-footer-bg.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -262,18 +241,15 @@ $break-small: 768px;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 15px 24px;
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	color: rgba(255, 255, 255, 0.7);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 .box-btn__item--active {
 	border: 2px solid $primary-color;
 	color: $cerulean-color;
-	cursor: pointer;
-}
-
-.box-btn__item--disabled {
-	border: 2px solid rgba(255, 255, 255, 0.7);
-	color: rgba(255, 255, 255, 0.7);
-	background: rgba(255, 255, 255, 0.1)
+	background: rgba(255, 255, 255, 1);
 }
 
 .box-btn__item.box-btn__item--explore-information .small-text{
@@ -286,7 +262,7 @@ $break-small: 768px;
 	width: 16px;
 	height: 16px;
 	margin-left: 24px;
-	background-image: url("../images/content/ic-rightarrow.svg");
+	background-image: url("../../static/images/content/ic-rightarrow.svg");
 	background-repeat: no-repeat;
 }
 
@@ -458,7 +434,7 @@ $break-small: 768px;
 .box-img-link--social-net {
 	width: 16px;
 	height: 13px;
-	background-image: url("../images/network/twitter-small.svg");
+	background-image: url("../../static/images/network/twitter-small.svg");
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -467,7 +443,7 @@ $break-small: 768px;
 .box-img-link--tech {
 	width: 40px;
 	height: 40px;
-	background-image: url("../images/network/im-tech.png");
+	background-image: url("../../static/images/network/im-tech.png");
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
