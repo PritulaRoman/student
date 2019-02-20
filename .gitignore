@@ -1,4 +1,6 @@
 #IDE
+/dist
+/node_modules
 /.idea
 /static/css/*.css
 /static/css/*.min.css
