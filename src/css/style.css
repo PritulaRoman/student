@@ -1,4 +1,7 @@
-@charset "UTF-8";
+/*Font path*/
+/*Images path*/
+/*color variables*/
+/*Break points for responsive design*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +9,6 @@
 
 @font-face {
   font-family: Roboto;
-  /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
   font-style: normal;
   font-weight: normal;
   src: url("../../static/fonts/roboto/Roboto.ttf") format("truetype"), url("../../static/fonts/roboto/Roboto.woff") format("woff");
@@ -24,7 +26,6 @@ body {
   line-height: 1.5;
 }
 
-/*Vitaliy's work*/
 a {
   color: #009cde;
   text-decoration: none;
@@ -34,9 +35,6 @@ a:hover {
   color: #009cde;
 }
 
-/*Alona's work*/
-/*color variables*/
-/*Break points for responsive design*/
 /*Header*/
 .box-bands {
   display: block;
@@ -157,7 +155,6 @@ a:hover {
   position: relative;
   text-align: left;
   color: #fff;
-  width: 100%;
   height: 882px;
   margin-bottom: 48px;
 }
@@ -165,7 +162,7 @@ a:hover {
 .box-bg-image--player {
   background-image: url("../../static/images/content/bg-football-p-1.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .box-bg-image--game {
@@ -196,12 +193,10 @@ a:hover {
   height: 0;
   left: 0;
 }
-
 .box-bg-image::before {
   border-right: 1440px solid transparent;
   border-top: 128px solid #fff;
 }
-
 .box-bg-image::after {
   bottom: 0;
   border-left: 1440px solid #fff;
@@ -291,7 +286,7 @@ a:hover {
   background: white;
 }
 
-.box-btn__item.box-btn__item--explore-information .small-text {
+.small-text {
   text-transform: lowercase;
 }
 
