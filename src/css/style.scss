@@ -53,9 +53,9 @@ a:hover {
 .box-bands {
   display: block;
   @media screen and (min-width: $break-small) {
-    display: flex;
-    justify-content: space-between;
-    min-height: 42px;
+	  display: flex;
+	  justify-content: space-between;
+	  min-height: 42px;
   }
 }
 
@@ -148,7 +148,6 @@ a:hover {
   @media screen and (min-width: $break-small) {
     background-image: url($img-path + "header/ic-user.svg");
   }
-
 }
 
 .user-data__name {
@@ -164,33 +163,34 @@ a:hover {
 
 
 .box-bg-image {
-	  position: relative;
-	  text-align: center;
-	  color: $primary-color;
-	  margin-bottom: 48px;
-	  min-height: 466px;
-	  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: 48px;
+  min-height: 466px;
+  background-repeat: no-repeat;
 
-	  &--player {
-	  	  background-image: url($img-path + "content/bg-football-p-1.png");
+  &--player {
+  	background-image: url($img-path + "content/bg-football-p-1.png");
+	  background-size: 100% 100%;
+  }
+
+  &--game {
+  	display: none;
+
+  	@media screen and (min-width: $break-small) {
+			display: block;
+		  height: 597px;
+		  margin-bottom: 72px;
+		  background-image: url($img-path + "content/bg-baseball-p-1-a.png");
 		  background-size: 100% 100%;
-	  }
-
-	  &--game {
-	  	display: none;
-
-	  	@media screen and (min-width: $break-small) {
-	  		  display: block;
-			  height: 597px;
-			  margin-bottom: 72px;
-			  background-image: url($img-path + "content/bg-baseball-p-1-a.png");
-			  background-size: 100% 100%;
 		}
-	  }
-	  @media screen and (min-width: $break-small){
-	  	text-align: left;
-	  	min-height: 882px;
-	  }
+  }
+
+  @media screen and (min-width: $break-small) {
+  	text-align: left;
+  	min-height: 882px;
+  }
 }
 
 
@@ -200,7 +200,7 @@ a:hover {
 	background-image: url($img-path + "content/ic-footer-bg.svg");
 	background-repeat: no-repeat;
 
-	@media screen and (min-width: $break-small){
+	@media screen and (min-width: $break-small) {
 		min-height: 484px;
 		background-size: 100%;
 	}
@@ -209,8 +209,9 @@ a:hover {
 .content-bounder {
   margin: 0 auto;
   max-width: 320px;
-  @media screen and (min-width: $break-small){
- 	max-width: 1140px;
+
+  @media screen and (min-width: $break-small) {
+ 		max-width: 1140px;
   }
 }
 
@@ -233,19 +234,20 @@ a:hover {
     @media screen and (min-width: $break-small) {
 	  	border-right: 1440px solid transparent;
 	    border-top: 128px solid $primary-color;
-	}
+		}
   }
 
   &::after {
     bottom: 0;
     border-left: 320px solid $primary-color;
-	border-top: 27px solid transparent;
+		border-top: 27px solid transparent;
 
     @media screen and (min-width: $break-small) {
 	    border-left: 1440px solid $primary-color;
 	    border-top: 128px solid transparent;
-	}
+		}
   }
+
   &--game {
   	&::after {
     bottom: 0;
@@ -258,7 +260,8 @@ a:hover {
 
 .box-wrapper-content {
   padding-top: 72px;
-  @media screen and (min-width: $break-small){
+
+  @media screen and (min-width: $break-small) {
   	padding-top: 208px;
   }
 }
@@ -267,12 +270,12 @@ a:hover {
 .box-text {
   width: calc(100% - 40px);
   margin: 0 20px 24px 20px;
+
   @media screen and (min-width: $break-small) {
   	width: 848px;
   	min-width: 848px;
   	margin: 0 0 48px 0;
   }
-
 }
 
 .main-text {
@@ -287,10 +290,12 @@ a:hover {
 	   	font-size: 58px;
 	  }
   }
+
   &--game {
 	  width: 100%;
 	  text-align: center;
   }
+
   &--game-title {
   	font-size: 18px;
   }
@@ -301,6 +306,7 @@ a:hover {
   display: block;
   margin-bottom: 24px;
   font-size: 14px;
+
   @media screen and (min-width: $break-small) {
 	  display: flex;
 	  justify-content: space-between;
@@ -327,19 +333,20 @@ a:hover {
   &--game {
 	  justify-content: center;
 	  margin-bottom: 72px;
-  }
-  
+  } 
 }
 
 .box-btn .box-btn__item {
 	&:first-child {
 		margin-left: 0;
 	}
+
   	&:nth-child(n + 2) {
 		display: none;
 	}
+
 	@media screen and (min-width: $break-small) {
-		&:nth-child(n + 2){
+		&:nth-child(n + 2) {
 			display: block;
 		}
 	}
@@ -360,9 +367,9 @@ a:hover {
 	margin-bottom: 24px;
 	
   @media screen and (min-width: $break-small) {
-	 display: inline-block;
-	  margin-left: 24px;
-	  margin-bottom: 0;
+		display: inline-block;
+		margin-left: 24px;
+		margin-bottom: 0;
   }
 
   &--active {
@@ -380,6 +387,7 @@ a:hover {
 /*Right arrow*/
 .box-btn__img {
 	display: none;
+
 	@media screen and (min-width: $break-small) {
 	  display: block;
 	  width: 16px;
@@ -394,8 +402,8 @@ a:hover {
 .rectangle {
 	display: none;
 
-  	@media screen and (min-width: $break-small) {
-  	  display: block;
+	@media screen and (min-width: $break-small) {
+  	display: block;
 	  box-sizing: border-box;
 	  margin-left: 28px;
 	  padding: 24px 30px 30px 41px;
@@ -430,10 +438,10 @@ a:hover {
 	margin-bottom: 72px;
 
 	@media screen and (min-width: $break-small) {
-  		display: flex;
-  		text-align: left;
-  		margin-bottom: 48px;
-  	}
+		display: flex;
+		text-align: left;
+		margin-bottom: 48px;
+  }
 }
 
 .box-cards .card {
@@ -441,15 +449,13 @@ a:hover {
 	margin-bottom: 48px;
 
 	@media screen and (min-width: $break-small) {
+		flex: 1;
+  	margin-left: 28px;
 		&:first-child {
 			margin-left: 0;
 		}
-		flex: 1;
-  		margin-left: 28px;
-  	}
+	}	
 }
-
-
 
 .card__item {
   margin: 0 auto;
@@ -477,6 +483,7 @@ a:hover {
   &--footer {
     color: #fff;
     text-align: center;
+
     @media screen and (min-width: $break-small) {
     	text-align: left;
     }
@@ -493,6 +500,8 @@ a:hover {
 }
 
 .card .card__text {
+	margin-left: 0;
+
 	&:last-child{
 		margin-bottom: 0;
 	}
@@ -501,14 +510,13 @@ a:hover {
 		display: inline-block;
 		margin-left: 20px;
 	}
+
 	@media screen and (min-width: $break-small) {
 		&:nth-child(n + 2) {
 			display: block;
 		}
 	}
 }
-
-
 
 /*Networks*/
 .box-networks {
@@ -542,7 +550,7 @@ a:hover {
 
 	@media screen and (min-width: $break-small) {
     	margin-left: 33px;
-    }
+  }
 }
 
 
