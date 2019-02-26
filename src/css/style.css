@@ -189,7 +189,6 @@ a:hover {
 @media screen and (min-width: 768px) {
   .box-bg-footer {
     min-height: 484px;
-    background-size: 100%;
   }
 }
 
@@ -254,8 +253,6 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .box-text {
-    width: 848px;
-    min-width: 848px;
     margin: 0 0 48px 0;
   }
 }
@@ -470,24 +467,42 @@ a:hover {
   }
 }
 
+.card__description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .card__description {
+    text-align: left;
+  }
+}
+
 .card__text {
   margin-bottom: 16px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.card__text:first-child {
+  margin-left: 0;
 }
 .card__text--footer {
   color: rgba(255, 255, 255, 0.7);
   transition: color 1s;
 }
-
-.card .card__text:last-child {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .card__text {
+    display: block;
+    margin-left: 0;
+  }
 }
-.card .card__text:nth-child(n + 2) {
+
+.wrapper {
   display: inline-block;
-  margin-left: 20px;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .card .card__text:nth-child(n + 2) {
-    display: block;
+  .wrapper {
+    text-align: left;
   }
 }
 
