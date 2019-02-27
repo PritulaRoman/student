@@ -31,10 +31,12 @@ export const buildCards = () => {
 				<div class="card">
 					<div class="card__item card__img" style="background-image: url('./static/images/cards/${image}')"></div>
 					<div class="card__item card__title" name="api">${title}</div>
-					<div class="card__text">
+					<div class="card__description">
 						${description}
 					</div>
-					${linksCard}
+          <div class="wrapper">
+					  ${linksCard}
+          </div> 
 				</div>
 			`;
         return card;
@@ -53,7 +55,9 @@ export const buildCards = () => {
 					<div class="card__title card__title--footer">
 						${title}
 					</div>
-					${footerCardLinks}
+          <div class="wrapper">
+					  ${footerCardLinks}
+          </div>
 				</div>`;
         return footerCard;
       }).join('');
