@@ -1,0 +1,18 @@
+/*Font path*/
+$font-path: '../../static/fonts/';
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  src: url($font-path + 'roboto/Roboto.ttf') format('truetype'),
+  url($font-path + 'roboto/Roboto.woff') format('woff');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  src: url($font-path + 'roboto/Robotobold.ttf') format('truetype'),
+  url($font-path + 'roboto/Robotobold.woff') format('woff');
+}

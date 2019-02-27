@@ -1,5 +1,5 @@
-/*Font path*/
-$font-path: '../../static/fonts/';
+@import 'modules/fonts';
+
 
 /*Images path*/
 $img-path: '../../static/images/';
@@ -11,27 +11,6 @@ $primary-color: #fff;
 
 /*Break points for responsive design*/
 $break-small: 768px;
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  src: url($font-path + 'roboto/Roboto.ttf') format('truetype'),
-  url($font-path + 'roboto/Roboto.woff') format('woff');
-}
-
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  src: url($font-path + 'roboto/Robotobold.ttf') format('truetype'),
-  url($font-path + 'roboto/Robotobold.woff') format('woff');
-}
 
 body {
   font-family: Roboto, sans-serif;
@@ -80,7 +59,6 @@ a:hover {
   	margin-left: 15px;
   }
 }
-
 
 /*Menu navigation*/
 .box-menu {
@@ -497,13 +475,8 @@ a:hover {
 }
 
 .card__text {
-	margin-bottom: 16px;
 	display: inline-block;
-	margin-left: 20px;
-	&:first-child {
-		margin-left: 0;
-	}
-	
+	margin: 0 10px 16px;
 
   &--footer {
 	  color: rgba(255, 255, 255, 0.7);
@@ -513,6 +486,7 @@ a:hover {
 	@media screen and (min-width: $break-small) {
 		display: block;
 		margin-left: 0;
+		margin-right: 0;
 	}
 }
 

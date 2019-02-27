@@ -1,12 +1,4 @@
 /*Font path*/
-/*Images path*/
-/*color variables*/
-/*Break points for responsive design*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
 @font-face {
   font-family: Roboto;
   font-style: normal;
@@ -19,6 +11,9 @@
   font-weight: bold;
   src: url("../../static/fonts/roboto/Robotobold.ttf") format("truetype"), url("../../static/fonts/roboto/Robotobold.woff") format("woff");
 }
+/*Images path*/
+/*color variables*/
+/*Break points for responsive design*/
 body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -478,12 +473,8 @@ a:hover {
 }
 
 .card__text {
-  margin-bottom: 16px;
   display: inline-block;
-  margin-left: 20px;
-}
-.card__text:first-child {
-  margin-left: 0;
+  margin: 0 10px 16px;
 }
 .card__text--footer {
   color: rgba(255, 255, 255, 0.7);
@@ -493,6 +484,7 @@ a:hover {
   .card__text {
     display: block;
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
