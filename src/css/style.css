@@ -1,4 +1,7 @@
-@charset "UTF-8";
+/*Font path*/
+/*Images path*/
+/*color variables*/
+/*Break points for responsive design*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +9,6 @@
 
 @font-face {
   font-family: Roboto;
-  /*незрозуміло, чому не получилось. Ніби зробив все правильно*/
   font-style: normal;
   font-weight: normal;
   src: url("../../static/fonts/roboto/Roboto.ttf") format("truetype"), url("../../static/fonts/roboto/Roboto.woff") format("woff");
@@ -24,7 +26,6 @@ body {
   line-height: 1.5;
 }
 
-/*Vitaliy's work*/
 a {
   color: #009cde;
   text-decoration: none;
@@ -34,51 +35,83 @@ a:hover {
   color: #009cde;
 }
 
-/*Alona's work*/
-/*color variables*/
 /*Header*/
 .box-bands {
-  display: flex;
-  justify-content: space-between;
-  min-height: 42px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .box-bands {
+    display: flex;
+    justify-content: space-between;
+    min-height: 42px;
+  }
 }
 
 /*Logo*/
 .box-logo {
-  flex-grow: 1;
-  display: block;
-  border-top: 8px solid #768692;
-  padding: 15px 150px 0 30px;
-  min-width: 181px;
+  border-top: none;
+  height: 42px;
+  padding: 15px 0 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .box-logo {
+    flex-grow: 1;
+    display: block;
+    border-top: 8px solid #768692;
+    min-width: 181px;
+  }
 }
 
 .box-logo__img {
-  display: block;
+  display: inline-block;
+}
+
+.box-logo__link {
+  margin-left: 15px;
 }
 
 /*Menu navigation*/
 .box-menu {
-  justify-content: center;
+  margin-top: -57px;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .box-menu {
+    justify-content: center;
+    margin-top: 0;
+  }
 }
 
 .box-link {
   padding: 27px 15px 0 15px;
+  flex: 1;
 }
 .box-link__item {
-  color: #b7c9d3;
-  display: block;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: color easy-in-out 0.2s;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .box-link__item {
+    color: #b7c9d3;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color easy-in-out 0.2s;
+  }
 }
 
 /*User data*/
 .user-data {
+  margin-top: -25px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 30px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .user-data {
+    margin-top: 0;
+    padding-right: 30px;
+  }
 }
 
 /*Share image*/
@@ -92,25 +125,36 @@ a:hover {
 
 /*Avatar*/
 .user-data__avatar {
+  background-image: url("../../static/images/header/ic-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
   width: 25px;
   height: 25px;
   margin-left: 23px;
-  background-image: url("../../static/images/header/ic-user.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .user-data__avatar {
+    background-image: url("../../static/images/header/ic-user.svg");
+  }
 }
 
 .user-data__name {
-  min-width: 104px;
-  color: #009cde;
-  margin-left: 11px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .user-data__name {
+    display: block;
+    min-width: 104px;
+    color: #009cde;
+    margin-left: 11px;
+  }
 }
 
 .box-bg-image {
   position: relative;
   text-align: left;
   color: #fff;
-  width: 100%;
   height: 882px;
   margin-bottom: 48px;
 }
@@ -118,7 +162,7 @@ a:hover {
 .box-bg-image--player {
   background-image: url("../../static/images/content/bg-football-p-1.png");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 .box-bg-image--game {
@@ -149,12 +193,10 @@ a:hover {
   height: 0;
   left: 0;
 }
-
 .box-bg-image::before {
   border-right: 1440px solid transparent;
   border-top: 128px solid #fff;
 }
-
 .box-bg-image::after {
   bottom: 0;
   border-left: 1440px solid #fff;
@@ -244,7 +286,7 @@ a:hover {
   background: white;
 }
 
-.box-btn__item.box-btn__item--explore-information .small-text {
+.small-text {
   text-transform: lowercase;
 }
 
