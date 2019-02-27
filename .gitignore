@@ -1,7 +1,7 @@
 #IDE
 /.idea
 /dist
-/node_modules
+
 /src/css/*.css
 /src/css/*.min.css
 /src/css/*.css.map
