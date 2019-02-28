@@ -59,14 +59,19 @@ a:hover {
   }
 }
 
+.box-bands .box-input {
+  display: none;
+}
+
 /*Logo*/
 .primary-bounder {
-	border-top: none;
+  border-top: none;
 
-	@media screen and (min-width: $break-small) {
-		 border-top: 8px solid #768692;
-	}
+  @media screen and (min-width: $break-small) {
+    border-top: 8px solid #768692;
+  }
 }
+
 .box-logo {
   height: 42px;
   padding: 15px 0 0 15px;
@@ -112,15 +117,74 @@ a:hover {
       font-size: 15px;
       font-weight: bold;
       text-transform: uppercase;
-      transition: color easy-in-out 0.2s;
+      transition: color ease-in-out 0.2s;
     }
   }
 }
+
 /*Input search*/
-.box-input__item {
-	min-width: 250px;
-	width: 250px;
+.box-input {
+  display: flex;
+  background: #F1F4F6;
+  border-radius: 2px;
+  position: relative;
+
+  &__item {
+    flex: 1;
+    border: none;
+    padding: 13px;
+    min-width: 250px;
+    background: #F1F4F6;
+  }
+
+  &__img {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    width: 24px;
+  }
 }
+
+/*Active behavior input*/
+.box-bands.box-bands--active {
+  .box-input {
+    display: block;
+    flex: 1;
+  }
+}
+
+.box-bands.box-bands--active {
+  .box-logo {
+    .box-logo__link{
+      display: none;
+      @media screen and (min-width: $break-small) {
+        display: block;
+      }
+    }
+  }
+  .user-data {
+    align-items: center;
+    .user-data__img-search {
+      display: none;
+    }
+    .user-data__avatar {
+      display: none;
+    }
+    .user-data__name {
+      display: none;
+    }
+    @media screen and (min-width: $break-small) {
+      .user-data__avatar {
+        display: block;
+      }
+      .user-data__name {
+        display: block;
+      }
+    }
+  }
+}
+
+
 /*User data*/
 .user-data {
   margin-top: -25px;
@@ -129,7 +193,7 @@ a:hover {
   padding: 15px;
 
   @media screen and (min-width: $break-small) {
-  	flex: 1;
+    flex: 1;
     margin-top: 0;
     padding-right: 30px;
   }
@@ -147,18 +211,16 @@ a:hover {
 
 /*Avatar*/
 .user-data__avatar {
-  background-image: url($img-path + "header/ic-menu.svg");
+  display: none;
+  background-image: url($img-path + "header/ic-user.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
   width: 25px;
   height: 25px;
   margin-left: 23px;
 
   @media screen and (min-width: $break-small) {
-    background-image: url($img-path + "header/ic-user.svg");
+    display: block;
   }
-
 }
 
 .user-data__name {
@@ -171,6 +233,20 @@ a:hover {
     margin-left: 11px;
   }
 }
+
+.user-data__item-burger {
+  background-image: url($img-path + "header/ic-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin-left: 23px;
+  @media screen and (min-width: $break-small) {
+    display: none;
+  }
+}
+
 
 
 .box-bg-image {
