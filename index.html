@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home authorization</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
 <header>
-    <div class="box-bands">
-        <div class="box-logo">
+    <div class="js-bounder box-bands">
+        <div class="box-logo primary-bounder">
             <a href="#developer-logo" class="box-logo__link" name="developer-logo">
                 <img src="static/images/header/tm-developer-logo-p-1.svg" alt="developer-logo" class="box-logo__img">
             </a>
         </div>
+
+        <!-- Main menu -->
         <div class="box-menu"></div>
-        <div class="box-logo user-data">
-            <div class="user-data__img-search"></div>
+
+        <div class="primary-bounder user-data">
+        		<div class="box-input">
+        			<input type="search" class="js-search box-input__item" placeholder="Search for...">
+        		</div>
+            <div class="js-search-btn user-data__img-search"></div>
             <div class="user-data__avatar"></div>
             <div class="user-data__name">John.martinezz</div>
+            <div class="user-data__item-burger"></div>
         </div>
     </div>
 </header>
@@ -105,7 +113,7 @@
 <div class="box-proposal content-bounder">
     <div class="box-proposal__links">
         <div class="box-proposal__links__title">We’re rebuilding the ticketing platform.</div>
-        <div class="box-proposal__links__text" name="proposal">
+        <div class="box-proposal__links__text" id="proposal">
             Follow along on
             <a href="#proposal">Twitter</a>,
             <a href="#proposal">Facebook</a>,
@@ -126,7 +134,7 @@
             </a>
         </div>
     </div>
-    <div class="box-proposal__links box-proposal__links--tech" name="tech">
+    <div class="box-proposal__links box-proposal__links--tech" id="tech">
         <div class="box-twitter-link">
             <a href="#tech" class="box-img-link box-img-link--social-net"></a>
         </div>
@@ -148,7 +156,7 @@
         <div class="text-label">12:13 PM - 3 Aug 2015</div>
     </div>
 </div>
-<div class="box-bg-footer" name="footer">
+<div class="box-bg-footer" id="footer">
     <div class="js-box-cards-footer box-wrapper-content box-cards content-bounder"></div>
     <div class="box-cards content-bounder">
         <a href="#">

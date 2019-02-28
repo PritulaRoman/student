@@ -1,32 +1,9 @@
+@import 'modules/variables';
 @import 'modules/fonts';
+@import 'modules/base';
 
-
-/*Images path*/
-$img-path: '../../static/images/';
-
-/*color variables*/
-$cerulean-color: #009cde;
-$royal-red-color: #d0006f;
-$primary-color: #fff;
-
-/*Break points for responsive design*/
-$break-small: 768px;
-
-body {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  color: #768692;
-  line-height: 1.5;
-}
-
-a {
-  color: #009cde;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #009cde;
-}
+// Modules
+@import 'modules/main-menu';
 
 /*Header*/
 .box-bands {
@@ -38,16 +15,26 @@ a:hover {
   }
 }
 
+.box-bands .box-input {
+  display: none;
+}
+
 /*Logo*/
-.box-logo {
+.primary-bounder {
   border-top: none;
+
+  @media screen and (min-width: $break-small) {
+    border-top: 8px solid #768692;
+  }
+}
+
+.box-logo {
   height: 42px;
   padding: 15px 0 0 15px;
 
   @media screen and (min-width: $break-small) {
     flex-grow: 1;
     display: block;
-    border-top: 8px solid #768692;
     min-width: 181px;
   }
 
@@ -60,33 +47,23 @@ a:hover {
   }
 }
 
-/*Menu navigation*/
-.box-menu {
-  margin-top: -57px;
+/*Input search*/
+.box-input {
   display: flex;
-
-  @media screen and (min-width: $break-small) {
-    justify-content: center;
-    margin-top: 0;
-  }
-}
-
-.box-link {
-  padding: 27px 15px 0 15px;
-  flex: 1;
+  position: relative;
+  border-radius: 2px;
+  background: $athens-gray-color;
 
   &__item {
-    display: none;
-  }
+    flex: 1;
+    height: 48px;
+    padding: 13px;
+    min-width: 250px;
+    border: none;
+    background: $athens-gray-color url($img-path + "header/ic-search.svg") no-repeat right 10px center;
 
-  @media screen and (min-width: $break-small) {
-    &__item {
-      color: #b7c9d3;
-      display: block;
-      font-size: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: color ease-in-out 0.2s;
+    &[type="search"] {
+      box-sizing: border-box;
     }
   }
 }
@@ -96,49 +73,97 @@ a:hover {
   margin-top: -25px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 15px;
+  padding: 15px;
 
   @media screen and (min-width: $break-small) {
+    flex: 1;
     margin-top: 0;
     padding-right: 30px;
   }
-}
 
-/*Share image*/
-.user-data__img-search {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  background-image: url($img-path + "header/ic-search.svg");
-  background-repeat: no-repeat;
-}
+  /*Share image*/
+  &__img-search {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+    background-image: url($img-path + "header/ic-search.svg");
+    background-repeat: no-repeat;
+  }
 
-/*Avatar*/
-.user-data__avatar {
-  background-image: url($img-path + "header/ic-menu.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  margin-left: 23px;
-
-  @media screen and (min-width: $break-small) {
+  /*Avatar*/
+  &__avatar {
+    display: none;
     background-image: url($img-path + "header/ic-user.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    margin-left: 23px;
+
+    @media screen and (min-width: $break-small) {
+      display: block;
+    }
+  }
+
+  &__name {
+    display: none;
+
+    @media screen and (min-width: $break-small) {
+      display: block;
+      min-width: 104px;
+      color: #009cde;
+      margin-left: 11px;
+    }
+  }
+
+  &__item-burger {
+    background-image: url($img-path + "header/ic-menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-left: 23px;
+
+    @media screen and (min-width: $break-small) {
+      display: none;
+    }
   }
 }
 
-.user-data__name {
-  display: none;
-
-  @media screen and (min-width: $break-small) {
+/*Active behavior input*/
+.box-bands--active {
+  .box-input {
     display: block;
-    min-width: 104px;
-    color: #009cde;
-    margin-left: 11px;
+    flex: 1;
   }
 }
 
+.box-bands--active {
+  .box-logo__link {
+    display: none;
+    @media screen and (min-width: $break-small) {
+      display: block;
+    }
+  }
+
+  .user-data {
+    align-items: center;
+
+    &__img-search,
+    &__avatar,
+    &__name {
+      display: none;
+    }
+
+    @media screen and (min-width: $break-small) {
+      &__avatar,
+      &__name {
+        display: block;
+      }
+    }
+  }
+}
 
 .box-bg-image {
   position: relative;
@@ -276,7 +301,6 @@ a:hover {
   }
 }
 
-
 .box-personal-information {
   display: block;
   margin-bottom: 24px;
@@ -308,7 +332,7 @@ a:hover {
   &--game {
 	  justify-content: center;
 	  margin-bottom: 72px;
-  } 
+  }
 }
 
 .box-btn .box-btn__item {
@@ -340,7 +364,7 @@ a:hover {
 	color: rgba(255, 255, 255, 0.7);
 	background: rgba(255, 255, 255, 0.1);
 	margin-bottom: 24px;
-	
+
   @media screen and (min-width: $break-small) {
 		display: inline-block;
 		margin-left: 24px;
@@ -430,7 +454,7 @@ a:hover {
 		&:first-child {
 			margin-left: 0;
 		}
-	}	
+	}
 }
 
 .card__item {

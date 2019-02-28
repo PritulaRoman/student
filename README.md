@@ -13,7 +13,12 @@ From students dir:
 
 ### Build JS
 From students dir:
-`npx webpack`
+
+One time run
+`npm run biuld`
+
+Run with watcher
+`npm run dev`
 
 
 ### Tools
