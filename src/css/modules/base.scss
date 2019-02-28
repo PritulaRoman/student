@@ -1,0 +1,15 @@
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: $slate-gray-color;
+  line-height: 1.5;
+}
+
+a {
+  color: $cerulean-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $cerulean-color;
+}

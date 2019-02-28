@@ -1,9 +1,18 @@
 import $ from "jquery";
 
-
 const initSearch = () => {
-  $('.js-search-btn').click(function () {
-      $('.js-search-btn').closest('.box-bands').addClass('box-bands--active');
+  const $bounder = $('.js-bounder');
+  const $btnSearch = $bounder.find('.js-search-btn');
+  const $inputSearch = $bounder.find('.js-search');
+  const activeCssClass = 'box-bands--active';
+
+  $btnSearch.on("click", function () {
+    $bounder.addClass(activeCssClass);
+    $inputSearch.focus();
+  });
+
+  $inputSearch.on("blur", function(){
+    $bounder.removeClass(activeCssClass);
   });
 };
 

@@ -1,0 +1,28 @@
+/*Menu navigation*/
+.box-menu {
+  margin-top: -57px;
+  display: flex;
+
+  @media screen and (min-width: $break-small) {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+.box-link {
+  padding: 27px 15px 0 15px;
+  flex: 1;
+
+  &__item {
+    display: none;
+
+    @media screen and (min-width: $break-small) {
+      color: $heather-color;
+      display: block;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color ease-in-out 0.2s;
+    }
+  }
+}

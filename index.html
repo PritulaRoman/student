@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home authorization</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
 <header>
-    <div class="box-bands">
+    <div class="js-bounder box-bands">
         <div class="box-logo primary-bounder">
             <a href="#developer-logo" class="box-logo__link" name="developer-logo">
                 <img src="static/images/header/tm-developer-logo-p-1.svg" alt="developer-logo" class="box-logo__img">
             </a>
         </div>
+
+        <!-- Main menu -->
         <div class="box-menu"></div>
+
         <div class="primary-bounder user-data">
         		<div class="box-input">
-        			<input type="search" class="box-input__item" placeholder="Search for...">
-              <img src="./static/images/header/ic-search.svg" class="box-input__img" alt="input search image">
+        			<input type="search" class="js-search box-input__item" placeholder="Search for...">
         		</div>
             <div class="js-search-btn user-data__img-search"></div>
             <div class="user-data__avatar"></div>
