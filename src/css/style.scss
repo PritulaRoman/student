@@ -60,15 +60,20 @@ a:hover {
 }
 
 /*Logo*/
+.primary-bounder {
+	border-top: none;
+
+	@media screen and (min-width: $break-small) {
+		 border-top: 8px solid #768692;
+	}
+}
 .box-logo {
-  border-top: none;
   height: 42px;
   padding: 15px 0 0 15px;
 
   @media screen and (min-width: $break-small) {
     flex-grow: 1;
     display: block;
-    border-top: 8px solid #768692;
     min-width: 181px;
   }
 }
@@ -111,15 +116,20 @@ a:hover {
     }
   }
 }
-
+/*Input search*/
+.box-input__item {
+	min-width: 250px;
+	width: 250px;
+}
 /*User data*/
 .user-data {
   margin-top: -25px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 15px;
+  padding: 15px;
 
   @media screen and (min-width: $break-small) {
+  	flex: 1;
     margin-top: 0;
     padding-right: 30px;
   }
@@ -130,6 +140,7 @@ a:hover {
   cursor: pointer;
   width: 24px;
   height: 24px;
+  margin-left: 16px;
   background-image: url($img-path + "header/ic-search.svg");
   background-repeat: no-repeat;
 }

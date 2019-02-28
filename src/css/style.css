@@ -48,8 +48,16 @@ a:hover {
 }
 
 /*Logo*/
-.box-logo {
+.primary-bounder {
   border-top: none;
+}
+@media screen and (min-width: 768px) {
+  .primary-bounder {
+    border-top: 8px solid #768692;
+  }
+}
+
+.box-logo {
   height: 42px;
   padding: 15px 0 0 15px;
 }
@@ -57,7 +65,6 @@ a:hover {
   .box-logo {
     flex-grow: 1;
     display: block;
-    border-top: 8px solid #768692;
     min-width: 181px;
   }
 }
@@ -100,15 +107,22 @@ a:hover {
   }
 }
 
+/*Input search*/
+.box-input__item {
+  min-width: 250px;
+  width: 250px;
+}
+
 /*User data*/
 .user-data {
   margin-top: -25px;
   display: flex;
   justify-content: flex-end;
-  padding-right: 15px;
+  padding: 15px;
 }
 @media screen and (min-width: 768px) {
   .user-data {
+    flex: 1;
     margin-top: 0;
     padding-right: 30px;
   }
@@ -119,6 +133,7 @@ a:hover {
   cursor: pointer;
   width: 24px;
   height: 24px;
+  margin-left: 16px;
   background-image: url("../../static/images/header/ic-search.svg");
   background-repeat: no-repeat;
 }
