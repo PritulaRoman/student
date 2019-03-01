@@ -173,26 +173,74 @@
   min-height: 466px;
   background-repeat: no-repeat;
 
-  &--player {
-  	background-image: url($img-path + "content/bg-football-p-1.png");
-	  background-size: 100% 100%;
-  }
-
-  &--game {
-  	display: none;
-
-  	@media screen and (min-width: $break-small) {
-			display: block;
-		  height: 597px;
-		  margin-bottom: 72px;
-		  background-image: url($img-path + "content/bg-baseball-p-1-a.png");
-		  background-size: 100% 100%;
-		}
-  }
-
   @media screen and (min-width: $break-small) {
   	text-align: left;
   	min-height: 882px;
+  }
+
+  &--player {
+    background-image: url($img-path + "content/bg-football-p-1.png");
+    background-size: 100% 100%;
+  }
+
+  &--game {
+    display: none;
+
+    @media screen and (min-width: $break-small) {
+      display: block;
+      height: 597px;
+      margin-bottom: 72px;
+      background-image: url($img-path + "content/bg-baseball-p-1-a.png");
+      background-size: 100% 100%;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 0;
+  }
+
+  &::before {
+    border-right: 320px solid transparent;
+    border-top: 27px solid $primary-color;
+
+    @media screen and (min-width: $break-small) {
+      border-right: 768px solid transparent;
+      border-top: 68px solid $primary-color;
+    }
+
+    @media screen and (min-width: $break-large) {
+      border-right: 1440px solid transparent;
+      border-top: 128px solid $primary-color;
+    }
+  }
+
+  &::after {
+    bottom: 0;
+    border-left: 320px solid $primary-color;
+    border-top: 27px solid transparent;
+
+    @media screen and (min-width: $break-small) {
+      border-left: 768px solid $primary-color;
+      border-top: 68px solid transparent;
+    }
+
+    @media screen and (min-width: $break-large) {
+      border-left: 1440px solid $primary-color;
+      border-top: 128px solid transparent;
+    }
+  }
+
+  &--game {
+    &::after {
+      bottom: 0;
+      border-left: 0;
+      border-top: 0;
+    }
   }
 }
 
@@ -218,47 +266,6 @@
 }
 
 /*Triangle*/
-
-.box-bg-image {
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    left: 0;
-  }
-
-  &::before {
-  	border-right: 320px solid transparent;
-    border-top: 27px solid $primary-color;
-
-    @media screen and (min-width: $break-small) {
-	  	border-right: 1440px solid transparent;
-	    border-top: 128px solid $primary-color;
-		}
-  }
-
-  &::after {
-    bottom: 0;
-    border-left: 320px solid $primary-color;
-		border-top: 27px solid transparent;
-
-    @media screen and (min-width: $break-small) {
-	    border-left: 1440px solid $primary-color;
-	    border-top: 128px solid transparent;
-		}
-  }
-
-  &--game {
-  	&::after {
-    bottom: 0;
-    border-left: 0;
-    border-top: 0;
-  	}
-  }
-}
-
 
 .box-wrapper-content {
   padding-top: 72px;
@@ -668,6 +675,8 @@
 
 
 /*Footer*/
-.box-bg-footer .box-cards:last-child {
-  margin-bottom: 0;
+.box-bg-footer {
+  .box-cards:last-child {
+    margin-bottom: 0;
+  }
 }
