@@ -301,6 +301,12 @@
   }
 }
 
+.box-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .box-personal-information {
   display: block;
   margin-bottom: 24px;
@@ -326,7 +332,7 @@
   @media screen and (min-width: $break-small) {
 	  display: flex;
 	  align-items: center;
-	  margin-bottom: 48px;
+	  margin-bottom: 0;
   }
 
   &--game {
