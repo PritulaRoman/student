@@ -30,13 +30,15 @@ export const buildCards = () => {
         const card = `
 				<div class="card">
 					<div class="card__item card__img" style="background-image: url('./static/images/cards/${image}')"></div>
-					<div class="card__item card__title" name="api">${title}</div>
-					<div class="card__description">
-						${description}
-					</div>
-          <div class="wrapper">
-					  ${linksCard}
-          </div> 
+					<div class="card__wrapper-text">
+            <div class="card__item card__title" name="api">${title}</div>
+            <div class="card__description">
+              ${description}
+            </div>
+            <div class="card-wrapper-links">
+              ${linksCard}
+            </div> 
+          </div>
 				</div>
 			`;
         return card;
@@ -55,7 +57,7 @@ export const buildCards = () => {
 					<div class="card__title card__title--footer">
 						${title}
 					</div>
-          <div class="wrapper">
+          <div class="card-wrapper-links">
 					  ${footerCardLinks}
           </div>
 				</div>`;
@@ -77,7 +79,7 @@ export const buildCards = () => {
     })
 
 
-    .catch((error) => {
+    .catch(() => {
       $boxCards.add($boxFooterCards).html("Sorry this API not available!!!");
     });
 };

@@ -1,6 +1,9 @@
 @import 'modules/variables';
 @import 'modules/fonts';
 @import 'modules/base';
+@import 'modules/cards';
+@import 'modules/buttons';
+
 
 // Modules
 @import 'modules/main-menu';
@@ -173,9 +176,12 @@
   min-height: 466px;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: $break-small) {
+  @media screen and (min-width: $break-tablet) {
   	text-align: left;
   	min-height: 882px;
+  }
+  @media screen and (min-width: $break-small) {
+   margin-bottom: 45px;
   }
 
   &--player {
@@ -261,16 +267,21 @@
   max-width: 320px;
 
   @media screen and (min-width: $break-small) {
+    max-width: 720px;
+  }
+
+  @media screen and (min-width: $break-tablet) {
  		max-width: 1140px;
   }
 }
-
-/*Triangle*/
 
 .box-wrapper-content {
   padding-top: 72px;
 
   @media screen and (min-width: $break-small) {
+    padding-top: 128px;
+  }
+  @media screen and (min-width: $break-tablet) {
   	padding-top: 208px;
   }
 }
@@ -331,90 +342,15 @@
   opacity: 0.7;
 }
 
-/*Buttons*/
-.box-btn {
-  display: block;
-  margin-bottom: 45px;
-
-  @media screen and (min-width: $break-small) {
-	  display: flex;
-	  align-items: center;
-	  margin-bottom: 0;
-  }
-
-  &--game {
-	  justify-content: center;
-	  margin-bottom: 72px;
-  }
-}
-
-.box-btn .box-btn__item {
-	&:first-child {
-		margin-left: 0;
-	}
-
-  	&:nth-child(n + 2) {
-		display: none;
-	}
-
-	@media screen and (min-width: $break-small) {
-		&:nth-child(n + 2) {
-			display: block;
-		}
-	}
-}
-
-.box-btn__item {
-	height: 48px;
-	box-sizing: border-box;
-	text-transform: uppercase;
-	background: $primary-color;
-	border-radius: 4px;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 15px 24px;
-	border: 2px solid rgba(255, 255, 255, 0.7);
-	color: rgba(255, 255, 255, 0.7);
-	background: rgba(255, 255, 255, 0.1);
-	margin-bottom: 24px;
-
-  @media screen and (min-width: $break-small) {
-		display: inline-block;
-		margin-left: 24px;
-		margin-bottom: 0;
-  }
-
-  &--active {
-	  border: 2px solid $primary-color;
-	  color: $cerulean-color;
-	  background: rgba(255, 255, 255, 1);
-  }
-}
-
-
 .small-text {
   text-transform: lowercase;
-}
-
-/*Right arrow*/
-.box-btn__img {
-	display: none;
-
-	@media screen and (min-width: $break-small) {
-	  display: block;
-	  width: 16px;
-	  height: 16px;
-	  margin-left: 24px;
-	  background-image: url($img-path + "content/ic-rightarrow.svg");
-	  background-repeat: no-repeat;
-	}
 }
 
 /*Rectangle*/
 .rectangle {
 	display: none;
 
-	@media screen and (min-width: $break-small) {
+	@media screen and (min-width: $break-tablet) {
   	display: block;
 	  box-sizing: border-box;
 	  margin-left: 28px;
@@ -441,99 +377,6 @@
   max-width: calc(50% - 25px);
   width: calc(50% - 25px);
   margin-left: 25px;
-}
-
-/*Cards*/
-.box-cards {
-	display: block;
-	text-align: center;
-	margin-bottom: 72px;
-
-	@media screen and (min-width: $break-small) {
-		display: flex;
-		text-align: left;
-		margin-bottom: 48px;
-  }
-}
-
-.box-cards .card {
-	margin-left: 0;
-	margin-bottom: 48px;
-
-	@media screen and (min-width: $break-small) {
-		flex: 1;
-  	margin-left: 28px;
-
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-}
-
-.card__item {
-  margin: 0 auto;
-}
-
-.card__img {
-	width: 46px;
-	height: 46px;
-	margin-bottom: 26px;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-
-	@media screen and (min-width: $break-small) {
-	  width: 92px;
-	  height: 92px;
-	}
-}
-
-.card__title {
-  color: #000;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 16px;
-
-  &--footer {
-    color: #fff;
-    text-align: center;
-
-    @media screen and (min-width: $break-small) {
-    	text-align: left;
-    }
-  }
-}
-
-.card__description {
-	text-align: center;
-	margin-bottom: 20px;
-	@media screen and (min-width: $break-small) {
-		text-align: left;
-	}
-}
-
-.card__text {
-	display: inline-block;
-	margin: 0 10px 16px;
-
-  &--footer {
-	  color: rgba(255, 255, 255, 0.7);
-	  transition: color 1s;
-  }
-
-	@media screen and (min-width: $break-small) {
-		display: block;
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-.wrapper {
-	display: inline-block;
-	text-align: center;
-
-	@media screen and (min-width: $break-small) {
-		text-align: left;
-	}
 }
 
 /*Networks*/

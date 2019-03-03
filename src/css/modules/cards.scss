@@ -1,0 +1,142 @@
+/*Cards*/
+.box-cards {
+  display: block;
+  text-align: center;
+  margin-bottom: 72px;
+
+  @media screen and (min-width: $break-tablet) {
+    display: flex;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  @media screen and (max-width: $break-small) {
+    display: block;
+  }
+}
+
+.card {
+  display: block;
+  margin-left: 0;
+  margin-bottom: 48px;
+
+
+  @media screen and (min-width: $break-small) {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  @media screen and (min-width: $break-tablet) {
+    display: block;
+    flex: 1;
+    margin-left: 28px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+  }
+
+  &__img {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 26px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media screen and (min-width: $break-small) {
+      width: 92px;
+      height: 92px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__title {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $break-small) {
+      text-align: left;
+    }
+
+    &--footer {
+      color: #fff;
+      text-align: center;
+
+      @media screen and (min-width: $break-small) {
+        text-align: left;
+      }
+    }
+  }
+  &__description {
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $break-small) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0 10px;
+
+    &--footer {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 1s;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      display: block;
+      margin: 0 0 16px 0;
+    }
+
+    @media screen and (min-width: $break-small) {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-wrapper-links {
+    display: inline-block;
+    text-align: center;
+
+    @media screen and (min-width: $break-tablet) {
+      text-align: left;
+    }
+  }
+
+  &__wrapper-text {
+    margin-left: 0;
+
+    @media screen and (min-width: $break-small) {
+      margin-left: 94px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      margin-left: 0;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
