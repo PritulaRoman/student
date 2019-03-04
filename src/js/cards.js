@@ -1,10 +1,10 @@
 import $ from "jquery";
 import axios from "axios";
 
-const getLinksCard = (cardLinks = [], linkCssClass = '') => {
+const getLinksCard = (cardLinks = [], linkCssClass = '', footerCssClass = '') => {
   return cardLinks.map(({title, href}) => {
     const link = `
-			<div class="card__text">
+			<div class="card__text ${footerCssClass}">
 				<a href="${href}" class="${linkCssClass}">${title}</a>
 			</div>`;
     return link;
@@ -30,13 +30,15 @@ export const buildCards = () => {
         const card = `
 				<div class="card">
 					<div class="card__item card__img" style="background-image: url('./static/images/cards/${image}')"></div>
-					<div class="card__item card__title" name="api">${title}</div>
-					<div class="card__description">
-						${description}
-					</div>
-          <div class="wrapper">
-					  ${linksCard}
-          </div> 
+					<div class="card__wrapper-text">
+            <div class="card__item card__title" name="api">${title}</div>
+            <div class="card__description">
+              ${description}
+            </div>
+            <div class="card-wrapper-links">
+              ${linksCard}
+            </div> 
+          </div>
 				</div>
 			`;
         return card;
@@ -49,13 +51,13 @@ export const buildCards = () => {
     .then((response) => {
       const footerCardsInformation = response.data.results;
       const footerCards = footerCardsInformation.map(({title, links}) => {
-        const footerCardLinks = getLinksCard(links, 'card__text--footer');
+        const footerCardLinks = getLinksCard(links, 'card__text--link-footer', 'card__text--footer');
         const footerCard = `
-	  			<div class="card">
+	  			<div class="card card--footer">
 					<div class="card__title card__title--footer">
 						${title}
 					</div>
-          <div class="wrapper">
+          <div class="card-wrapper-links card-wrapper-links--footer">
 					  ${footerCardLinks}
           </div>
 				</div>`;
@@ -77,7 +79,7 @@ export const buildCards = () => {
     })
 
 
-    .catch((error) => {
+    .catch(() => {
       $boxCards.add($boxFooterCards).html("Sorry this API not available!!!");
     });
 };
