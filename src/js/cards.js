@@ -1,10 +1,10 @@
 import $ from "jquery";
 import axios from "axios";
 
-const getLinksCard = (cardLinks = [], linkCssClass = '') => {
+const getLinksCard = (cardLinks = [], linkCssClass = '', footerCssClass = '') => {
   return cardLinks.map(({title, href}) => {
     const link = `
-			<div class="card__text">
+			<div class="card__text ${footerCssClass}">
 				<a href="${href}" class="${linkCssClass}">${title}</a>
 			</div>`;
     return link;
@@ -51,13 +51,13 @@ export const buildCards = () => {
     .then((response) => {
       const footerCardsInformation = response.data.results;
       const footerCards = footerCardsInformation.map(({title, links}) => {
-        const footerCardLinks = getLinksCard(links, 'card__text--footer');
+        const footerCardLinks = getLinksCard(links, 'card__text--link-footer', 'card__text--footer');
         const footerCard = `
-	  			<div class="card">
+	  			<div class="card card--footer">
 					<div class="card__title card__title--footer">
 						${title}
 					</div>
-          <div class="card-wrapper-links">
+          <div class="card-wrapper-links card-wrapper-links--footer">
 					  ${footerCardLinks}
           </div>
 				</div>`;

@@ -1,12 +1,13 @@
 @import 'modules/variables';
 @import 'modules/fonts';
 @import 'modules/base';
-@import 'modules/cards';
-@import 'modules/buttons';
+
 
 
 // Modules
 @import 'modules/main-menu';
+@import 'modules/buttons';
+@import 'modules/cards';
 
 /*Header*/
 .box-bands {
@@ -176,7 +177,7 @@
   min-height: 466px;
   background-repeat: no-repeat;
 
-  @media screen and (min-width: $break-tablet) {
+  @media screen and (min-width: $break-small) {
   	text-align: left;
   	min-height: 882px;
   }
@@ -191,13 +192,18 @@
 
   &--game {
     display: none;
+    margin-bottom: 72px;
+    background-image: url($img-path + "content/bg-baseball-p-1-a.png");
+    background-size: 100% 100%;
 
     @media screen and (min-width: $break-small) {
       display: block;
+      height: 604px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      display: block;
       height: 597px;
-      margin-bottom: 72px;
-      background-image: url($img-path + "content/bg-baseball-p-1-a.png");
-      background-size: 100% 100%;
     }
   }
 
@@ -294,6 +300,10 @@
   @media screen and (min-width: $break-small) {
   	margin: 0 0 48px 0;
   }
+
+  &--presentation {
+    opacity: 0.7;
+  }
 }
 
 .main-text {
@@ -310,12 +320,25 @@
   }
 
   &--game {
-	  width: 100%;
+	  width: calc(100% - 298px);
+    margin: 0 149px 48px;
 	  text-align: center;
+
+    @media screen and (min-width: $break-tablet) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &--game-title {
-  	font-size: 18px;
+    @media screen and (min-width: $break-small) {
+      font-size: 47px;
+      margin-bottom: 24px;
+    }
+    @media screen and (min-width: $break-tablet) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -338,9 +361,7 @@
  }
 }
 
-.box-text--presentation {
-  opacity: 0.7;
-}
+
 
 .small-text {
   text-transform: lowercase;
@@ -418,47 +439,64 @@
 /*Proposal cards*/
 .box-proposal {
 	display: none;
-
+  margin-bottom: 72px;
 	@media screen and (min-width: $break-small) {
-	  display: flex;
-	  margin-bottom: 72px;
+	  display: block;
+    text-align: center;
+
 	}
+  @media screen and (min-width: $break-tablet) {
+    display: flex;
+    text-align: left;
+  }
+
+  &__links {
+    width: calc(100% - 298px);
+    margin: 0 149px;
+
+    @media screen and (min-width: $break-tablet) {
+      padding-top: 15px;
+      margin-left: 30px;
+      margin-right: 0;
+      max-width: calc(50% - 30px);
+      width: calc(50% - 30px);
+    }
+
+    &__title {
+      padding-top: 9px;
+      color: #414141;
+      font-size: 20px;
+      margin-bottom: 26px;
+      font-weight: bold;
+    }
+
+    &__text {
+      margin-bottom: 57px;
+    }
+    /* Tech card */
+    &--tech {
+      border: 1px solid rgba(118, 134, 146, 0.2);
+      padding: 24px 30px;
+      text-align: left;
+    }
+
+    &__text--tech {
+      margin-bottom: 16px;
+    }
+  }
 }
-
-.box-proposal__links {
-  padding-top: 15px;
-  margin-left: 30px;
-  max-width: calc(50% - 30px);
-  width: calc(50% - 30px);
-
-  &__title {
-	  padding-top: 9px;
-	  color: #414141;
-	  font-size: 20px;
-	  margin-bottom: 26px;
-	  font-weight: bold;
-  }
-
-  &__text {
-  	margin-bottom: 57px;
-  }
-
-  &--tech {
-	  border: 1px solid rgba(118, 134, 146, 0.2);
-	  padding-right: 15px;
-	  padding-bottom: 24px;
-	  padding-left: 30px;
-  }
-
-  &__text--tech {
-  	margin-bottom: 16px;
-  }
-}
-
 
 .box-link-wrapper {
   display: flex;
   margin-bottom: 16px;
+  &--first-card {
+    justify-content: center;
+    margin-bottom: 48px;
+    @media screen and (min-width: $break-tablet) {
+      justify-content: flex-start;
+      margin-bottom: 16px;
+    }
+  }
 }
 
 .box-link-wrapper {
@@ -469,13 +507,6 @@
   }
 }
 
-/* Tech card */
-.box-proposal__links--tech {
-  border: 1px solid rgba(118, 134, 146, 0.2);
-  padding-right: 15px;
-  padding-bottom: 24px;
-  padding-left: 30px;
-}
 .box-twitter-link {
   display: flex;
   justify-content: flex-end;
@@ -486,7 +517,7 @@
 
   &--social-net {
 	  width: 16px;
-	  height: 13px;
+	  height: 14px;
 	  background-image: url($img-path + "network/twitter-small.svg");
 	  background-position: center;
 	  background-size: 100% 100%;
@@ -502,7 +533,6 @@
 	  background-repeat: no-repeat;
   }
 }
-
 
 .box-column-direction {
   flex-direction: column;
@@ -521,7 +551,6 @@
   height: 16px;
   line-height: 0.3;
 }
-
 
 /*Footer*/
 .box-bg-footer {

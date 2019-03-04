@@ -12,6 +12,13 @@
   @media screen and (max-width: $break-small) {
     display: block;
   }
+  &--footer {
+    @media screen and (min-width: $break-small) {
+      display: flex;
+      text-align: left;
+      margin-bottom: 48px;
+    }
+  }
 }
 
 .card {
@@ -89,11 +96,6 @@
     display: inline-block;
     margin: 0 10px;
 
-    &--footer {
-      color: rgba(255, 255, 255, 0.7);
-      transition: color 1s;
-    }
-
     @media screen and (min-width: $break-tablet) {
       display: block;
       margin: 0 0 16px 0;
@@ -104,14 +106,31 @@
         margin-left: 0;
       }
     }
+
+    &--link-footer {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 1s;
+    }
+
+    &--footer {
+      @media screen and (min-width: $break-small) {
+        display: block;
+        margin: 0 0 16px 0;
+      }
+    }
   }
 
   &-wrapper-links {
     display: inline-block;
     text-align: center;
 
-    @media screen and (min-width: $break-tablet) {
+    @media screen and (min-width: $break-small) {
       text-align: left;
+    }
+    &--footer {
+      @media screen and (min-width: $break-small) {
+        display: block;
+      }
     }
   }
 
@@ -126,6 +145,14 @@
       margin-left: 0;
     }
 
+  }
+
+  &--footer {
+    @media screen and (min-width: $break-small) {
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+    }
   }
 }
 
