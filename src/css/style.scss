@@ -28,7 +28,7 @@
   border-top: none;
 
   @media screen and (min-width: $break-small) {
-    border-top: 8px solid #768692;
+    border-top: 8px solid $slate-gray-color;
   }
 }
 
@@ -256,7 +256,6 @@
   }
 }
 
-
 .box-bg-footer {
 	background-size: cover;
 	min-height: 755px;
@@ -361,8 +360,6 @@
  }
 }
 
-
-
 .small-text {
   text-transform: lowercase;
 }
@@ -378,7 +375,7 @@
 	  padding: 24px 30px 30px 41px;
 	  width: calc(26% - 28px);
 	  min-height: 190px;
-	  background: rgba(255, 255, 255, 0.2);
+	  background: rgba($primary-color, 0.2);
 	  border-radius: 4px;
  	}
 }
@@ -475,7 +472,7 @@
     }
     /* Tech card */
     &--tech {
-      border: 1px solid rgba(118, 134, 146, 0.2);
+      border: 1px solid rgba($slate-gray-color, 0.2);
       padding: 24px 30px;
       text-align: left;
     }
