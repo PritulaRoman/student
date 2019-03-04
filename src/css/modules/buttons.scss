@@ -29,9 +29,9 @@
     font-size: 12px;
     font-weight: bold;
     padding: 15px 24px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    color: rgba(255, 255, 255, 0.7);
-    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba($primary-color, 0.7);
+    color: rgba($primary-color, 0.7);
+    background: rgba($primary-color, 0.1);
     margin-bottom: 24px;
 
     &:first-child {
@@ -63,7 +63,7 @@
     &--active {
       border: 2px solid $primary-color;
       color: $cerulean-color;
-      background: rgba(255, 255, 255, 1);
+      background: rgba($primary-color, 1);
     }
 
     &--small {

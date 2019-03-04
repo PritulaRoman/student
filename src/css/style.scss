@@ -115,7 +115,7 @@
     @media screen and (min-width: $break-small) {
       display: block;
       min-width: 104px;
-      color: #009cde;
+      color: $cerulean-color;
       margin-left: 11px;
     }
   }
@@ -461,7 +461,7 @@
 
     &__title {
       padding-top: 9px;
-      color: #414141;
+      color: $tundora-color;
       font-size: 20px;
       margin-bottom: 26px;
       font-weight: bold;
