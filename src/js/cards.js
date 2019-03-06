@@ -18,7 +18,7 @@ export const buildCards = () => {
   const $boxFooterCards = $('.js-box-cards-footer');
 
   // Header cards
-  const $boxHeaderCards = $('.box-menu');
+  const $boxHeaderCards = $('.js-menu');
 
   axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
     .then((response) => {
@@ -77,7 +77,6 @@ export const buildCards = () => {
       }).join('');
       $boxHeaderCards.html(headerCardes);
     })
-
 
     .catch(() => {
       $boxCards.add($boxFooterCards).html("Sorry this API not available!!!");

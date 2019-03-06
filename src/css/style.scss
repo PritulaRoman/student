@@ -8,6 +8,7 @@
 @import 'modules/main-menu';
 @import 'modules/buttons';
 @import 'modules/cards';
+@import 'modules/cards-connecting';
 
 /*Header*/
 .box-bands {
@@ -16,6 +17,35 @@
 	  display: flex;
 	  justify-content: space-between;
 	  min-height: 42px;
+  }
+
+  /*Products page header background*/
+  &--products {
+    position: relative;
+    min-height: 114px;
+    margin-bottom: 96px;
+    background-image: url($img-path + "header/bg-football-p-1@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 120px solid #fff;
+      border-left: 1440px solid transparent;
+    }
+
+    @media screen and (min-width: $break-small) {
+      min-height: 152px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      min-height: 208px;
+    }
   }
 }
 
@@ -93,6 +123,11 @@
     margin-left: 16px;
     background-image: url($img-path + "header/ic-search.svg");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*Products page share image*/
+    &--products {
+      background-image: url($img-path + "header/ic-search-primary.svg");
+    }
   }
 
   /*Avatar*/
@@ -384,6 +419,13 @@
 .box-row {
   display: flex;
   text-align: right;
+
+  /*Products page*/
+  &--products {
+    text-align: left;
+    flex-wrap: wrap;
+    margin-bottom: 72px;
+  }
 }
 
 .rectangle__text {
@@ -555,3 +597,46 @@
     margin-bottom: 0;
   }
 }
+/*_____________________*/
+/*Products page*/
+
+/*Main text row*/
+.box-main-text {
+  min-width: 52%;
+  width: 52%;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.19;
+  color: $tundora-color;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.box-client {
+  border: 1px solid $link-water;
+  padding: 48px 24px;
+  max-width: calc(25% + 30px);
+  width: calc(25% + 30px);
+  margin-left: 30px;
+  text-align: center;
+  &__title {
+    line-height: 1.33;
+    font-weight: bold;
+    font-size: 24px;
+    color: $cerulean-color;
+    margin-bottom: 16px;
+  }
+  &__text {
+    line-height: 1.5;
+  }
+}
+
+.box-secondary-text{
+  max-width: 52%;
+  margin-top: -14px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.33;
+}
+
+

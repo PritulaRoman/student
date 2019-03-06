@@ -25,5 +25,13 @@
       text-transform: uppercase;
       transition: color ease-in-out 0.2s;
     }
+
+    &--products {
+      color: rgba($primary-color, 0.7);
+
+      &-active {
+        color: $primary-color;
+      }
+    }
   }
 }
