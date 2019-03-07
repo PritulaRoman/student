@@ -1,5 +1,5 @@
 /.idea
-/dist/*
+/dist/*.js
 /node_modules/*
 *.css
 *.min.css

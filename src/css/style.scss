@@ -423,8 +423,9 @@
   /*Products page*/
   &--products {
     text-align: left;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 72px;
+    align-items: flex-start;
   }
 }
 
@@ -601,15 +602,22 @@
 /*Products page*/
 
 /*Main text row*/
+.box-text-wrapper {
+  max-width: 52%;
+}
 .box-main-text {
-  min-width: 52%;
-  width: 52%;
   font-size: 54px;
   font-weight: 900;
   line-height: 1.19;
   color: $tundora-color;
   text-transform: uppercase;
   margin-bottom: 24px;
+}
+.box-secondary-text{
+  margin-top: -14px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.33;
 }
 
 .box-client {
@@ -631,12 +639,6 @@
   }
 }
 
-.box-secondary-text{
-  max-width: 52%;
-  margin-top: -14px;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.33;
-}
+
 
 
