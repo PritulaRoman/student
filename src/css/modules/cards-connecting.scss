@@ -1,0 +1,196 @@
+/*Connecting cards*/
+.box-cards-connecting {
+  position: relative;
+  padding: 168px 150px 192px;
+  background: $athens-gray;
+  margin-bottom: 72px;
+
+  &::before,
+  &::after{
+    position: absolute;
+    content: "";
+    right: 0;
+  }
+
+  &::before {
+    top: 0;
+    border-top: 120px solid $primary-color;
+    border-left: 1440px solid transparent;
+  }
+
+  &::after {
+    bottom: 0;
+    border-bottom: 120px solid $primary-color;
+    border-left: 1440px solid transparent;
+  }
+
+  &__title {
+    color: $tundora-color;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.33;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+
+    &--letter {
+      text-transform: lowercase;
+    }
+    &--join {
+      color: $primary-color;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.33;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 72px;
+
+    &--join {
+      color: $primary-color;
+      margin-bottom: 24px;
+    }
+  }
+
+  &--widgets {
+    padding: 0 347px;
+    background: $primary-color;
+    &::before,
+    &::after{
+      border: none;
+    }
+  }
+
+  &--join {
+    padding: 201px 443px 215px;
+    background: rgba($scampi-color, 0.9);
+    margin-bottom: 96px;
+  }
+
+  &--footer {
+    padding: 0 150px;
+    margin-bottom: 0;
+  }
+}
+
+/*Open APIs block*/
+.box-item-description {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+
+  &:nth-child(2n) {
+    padding-bottom: 66px;
+    border-bottom: 1px solid rgba($heather-color, 0.2);
+    margin-bottom: 47px;
+  }
+}
+.box-article {
+  border-top: 1px solid rgba($heather-color, 0.2);
+  margin-bottom: 16px;
+  max-width: 32%;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+.box-label {
+  display: flex;
+  align-items: center;
+  &__title {
+    margin-left: 5px;
+    font-weight: bold;
+    color: $heather-color;
+    &--partner {
+      margin-left: 0;
+    }
+  }
+}
+.box-star-img {
+  width: 12px;
+  height: 12px;
+  background: url($img-path + "products/ic-star.svg") no-repeat;
+}
+
+/*Rectangle items*/
+.wrapper-rectangles {
+  display: flex;
+  width: 32%;
+  flex-wrap: wrap;
+}
+.box-rectangle {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 166px;
+  height: 166px;
+  padding: 20px 17px 20px 22px;
+  background: $primary-color;
+  margin: 0 0 30px 30px;
+  overflow: hidden;
+  transition: background-color 0.2s linear;
+
+    &-bg-img {
+      background-size: 68px 68px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &--search {
+        background-image: url($img-path + "products/ic-search-big.svg");
+      }
+
+      &--publish {
+        background-image: url($img-path + "products/ic-publish.svg");
+      }
+      &--author {
+        background-image: url($img-path + "products/ic-oauth.svg");
+      }
+
+      &--partners {
+        background-image: url($img-path + "products/ic-partners.svg");
+      }
+
+      &--pick {
+        background-image: url($img-path + "products/ic-top-picks.svg");
+      }
+
+      &--flag {
+        background-image: url($img-path + "products/ic-flag.svg");
+      }
+
+      &--cart {
+        background-image: url($img-path + "products/ic-cart.svg");
+      }
+
+      &--seasons {
+        background-image: url($img-path + "products/ic-seasons.svg");
+      }
+      &--status {
+        background-image: url($img-path + "products/ic-inventory-status.svg");
+      }
+    }
+
+  /*Text link card*/
+    &__title {
+      font-weight: bold;
+      line-height: 1.5;
+      color: $tundora-color;
+    }
+
+    &__description {
+      font-size: 12px;
+      line-height: 1.67;
+      color: $slate-gray-color;
+      max-width: 127px;
+    }
+
+    &:hover {
+      background-color: rgba($cerulean-color, 0.2);
+      transform: scale(1.1);
+    }
+}
+
+
+
+
+
