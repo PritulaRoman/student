@@ -128,7 +128,8 @@
   padding: 20px 17px 20px 22px;
   background: $primary-color;
   margin: 0 0 30px 30px;
-  transition: background-color 0.5s ease;
+  overflow: hidden;
+  transition: background-color 0.2s linear;
 
     &-bg-img {
       background-size: 68px 68px;
@@ -185,6 +186,7 @@
 
     &:hover {
       background-color: rgba($cerulean-color, 0.2);
+      transform: scale(1.1);
     }
 }
 

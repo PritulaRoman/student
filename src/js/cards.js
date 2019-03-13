@@ -23,6 +23,7 @@ export const buildCards = () => {
   //Products footer cards
   const $boxFooterProductsCards = $('.js-box-cards-products');
 
+
   axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
     .then((response) => {
       const result = response.data.items;
