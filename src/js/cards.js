@@ -20,6 +20,9 @@ export const buildCards = () => {
   // Header cards
   const $boxHeaderCards = $('.js-menu');
 
+  //Products footer cards
+  const $boxFooterProductsCards = $('.js-box-cards-products');
+
   axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
     .then((response) => {
       const result = response.data.items;
@@ -64,6 +67,24 @@ export const buildCards = () => {
         return footerCard;
       }).join('');
       $boxFooterCards.html(footerCards);
+      return response;
+    })
+    .then((response) => {
+      const footerCardsInformation = response.data.results;
+      const footerCards = footerCardsInformation.map(({title, links}) => {
+        const footerCardLinks = getLinksCard(links, 'card__text--link-footer-products');
+        const footerCardProduct = `
+        <div class="card card--footer">
+        <div class="card__title card__title--footer card__title--footer-products">
+          ${title}
+        </div>
+        <div class="card-wrapper-links card-wrapper-links--footer">
+          ${footerCardLinks}
+        </div>
+      </div>`;
+        return footerCardProduct;
+      }).join('');
+      $boxFooterProductsCards.html(footerCards);
       return response;
     })
     .then((response) => {

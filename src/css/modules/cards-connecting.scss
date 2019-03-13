@@ -37,6 +37,9 @@
     &--letter {
       text-transform: lowercase;
     }
+    &--join {
+      color: $primary-color;
+    }
   }
 
   &__text {
@@ -46,6 +49,31 @@
     text-align: center;
     max-width: 750px;
     margin: 0 auto 72px;
+
+    &--join {
+      color: $primary-color;
+      margin-bottom: 24px;
+    }
+  }
+
+  &--widgets {
+    padding: 0 347px;
+    background: $primary-color;
+    &::before,
+    &::after{
+      border: none;
+    }
+  }
+
+  &--join {
+    padding: 201px 443px 215px;
+    background: rgba($scampi-color, 0.9);
+    margin-bottom: 96px;
+  }
+
+  &--footer {
+    padding: 0 150px;
+    margin-bottom: 0;
   }
 }
 
@@ -93,78 +121,85 @@
   flex-wrap: wrap;
 }
 .box-rectangle {
-  padding: 49px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 166px;
+  height: 166px;
+  padding: 20px 17px 20px 22px;
   background: $primary-color;
   margin: 0 0 30px 30px;
-  &__img {
-    display: block;
-    padding: 0;
-    width: 68px;
-    height: 68px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+  transition: background-color 0.5s ease;
 
-    &--search {
-      background-image: url($img-path + "products/ic-search-big.svg");
+    &-bg-img {
+      background-size: 68px 68px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &--search {
+        background-image: url($img-path + "products/ic-search-big.svg");
+      }
+
+      &--publish {
+        background-image: url($img-path + "products/ic-publish.svg");
+      }
+      &--author {
+        background-image: url($img-path + "products/ic-oauth.svg");
+      }
+
+      &--partners {
+        background-image: url($img-path + "products/ic-partners.svg");
+      }
+
+      &--pick {
+        background-image: url($img-path + "products/ic-top-picks.svg");
+      }
+
+      &--flag {
+        background-image: url($img-path + "products/ic-flag.svg");
+      }
+
+      &--cart {
+        background-image: url($img-path + "products/ic-cart.svg");
+      }
+
+      &--seasons {
+        background-image: url($img-path + "products/ic-seasons.svg");
+      }
+      &--status {
+        background-image: url($img-path + "products/ic-inventory-status.svg");
+      }
     }
 
-    &--publish {
-      background-image: url($img-path + "products/ic-publish.svg");
+
+
+
+
+
+
+
+
+
+
+  /*Text link card*/
+    &__title {
+      font-weight: bold;
+      line-height: 1.5;
+      color: $tundora-color;
     }
 
-    &--author {
-      background-image: url($img-path + "products/ic-oauth.svg");
+    &__description {
+      font-size: 12px;
+      line-height: 1.67;
+      color: $slate-gray-color;
+      max-width: 127px;
     }
 
-    &--partners {
-      background-image: url($img-path + "products/ic-partners.svg");
+    &:hover {
+      background-color: rgba($cerulean-color, 0.2);
     }
-
-    &--pick {
-      background-image: url($img-path + "products/ic-top-picks.svg");
-    }
-
-    &--flag {
-      background-image: url($img-path + "products/ic-flag.svg");
-    }
-
-    &--cart {
-      background-image: url($img-path + "products/ic-cart.svg");
-    }
-
-    &--seasons {
-      background-image: url($img-path + "products/ic-seasons.svg");
-    }
-
-    &--status {
-      background-image: url($img-path + "products/ic-inventory-status.svg");
-    }
-  }
-  &--text {
-    padding: 20px 17px 20px 22px;
-  }
 }
 
-/*Text link card*/
-
-.link-text {
-  display: block;
 
 
-  &__title {
-    font-weight: bold;
-    line-height: 1.5;
-    color: $tundora-color;
-  }
 
-  &__description {
-    font-size: 12px;
-    line-height: 1.67;
-    color: $slate-gray-color;
-    max-width: 127px;
-  }
 
-  &:hover {
-    background: $heather-color;
-  }
-}

@@ -28,6 +28,7 @@
       <div class="user-data__item-burger"></div>
     </div>
   </div>
+</header>
 
   <!--Main text row-->
   <div class="box-row box-row--products content-bounder">
@@ -75,21 +76,13 @@
       </div>
       <!--Rectangle items-->
       <div class="wrapper-rectangles">
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--search"></a>
-        </div>
-        <div class="box-rectangle box-rectangle--text">
-          <a href="#" class="link-text">
-            <div class="link-text__title">Commerce API</div>
-            <div class="link-text__description">Short description of selected API. Not more than ten-fifteen words.</div>
-          </a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--publish"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--author"></a>
-        </div>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--search"></a>
+        <a href="#" class="box-rectangle">
+          <div class="box-rectangle__title">Commerce API</div>
+          <div class="box-rectangle__description">Short description of selected API. Not more than ten-fifteen words.</div>
+        </a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--publish"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--author"></a>
       </div>
     </div>
     <!--Partners block-->
@@ -104,32 +97,63 @@
       </div>
       <!--Rectangle items-->
       <div class="wrapper-rectangles">
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--partners"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--pick"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--flag"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--cart"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--seasons"></a>
-        </div>
-        <div class="box-rectangle">
-          <a href="#" class="box-rectangle__img box-rectangle__img--status"></a>
-        </div>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--partners"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--pick"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--flag"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--cart"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--seasons"></a>
+        <a href="#" class="box-rectangle box-rectangle-bg-img box-rectangle-bg-img--status"></a>
       </div>
     </div>
-    <div class="red"></div>
     <button class="box-btn__item box-btn__item--product">ACCESS API DOCS</button>
   </div>
 
+  <!--Widgets bock-->
+  <div class="box-cards-connecting box-cards-connecting--widgets">
+    <div class="box-cards-connecting__title">SDKs & Widgets</div>
+    <div class="box-cards-connecting__text">Easy integration? No sweat.</div>
+    <div class="box-cards">
+      <div class="card">
+        <img src="./static/images/cards/img-account-manager.jpg" alt="account-manager" class="card__img card__img--widgets">
+        <div class="card__title card__title--widgets">Account Manager</div>
+        <div class="card__description card__description--widgets">
+          Enable fans to manage their tickets within your app using the AccountManager SDK for iOS and Android.
+        </div>
+        <button class="box-btn__item box-btn__item--product">EXPLORE SDKs</button>
+      </div>
+      <div class="card">
+        <img src="./static/images/cards/img-direct-payments.jpg" alt="img-direct-payments" class="card__img card__img--widgets">
+        <div class="card__title card__title--widgets">Direct Payments</div>
+        <div class="card__description card__description--widgets">
+          Sell tickets directly on your website at no additional cost with Universe’s dead-simple event widget.
+        </div>
+        <button class="box-btn__item box-btn__item--product">GET WIDGETIZED</button>
+      </div>
+    </div>
+  </div>
+  <!--Join block-->
+  <div class="box-cards-connecting box-cards-connecting--join">
+    <div class="box-cards-connecting__title box-cards-connecting__title--join">
+      Get affiliated.
+    </div>
+    <div class="box-cards-connecting__text box-cards-connecting__text--join">
+      Do you have a site that attracts visitors who are interested in buying tickets? If so,
+      we have an opportunity for you to monetize your site and make money through the Ticketmaster Affiliate Program.
+    </div>
+    <button class="box-btn__item box-btn__item--product box-btn__item--product-active">GET WIDGETIZED</button>
+  </div>
+  <div class="box-cards-connecting box-cards-connecting--widgets box-cards-connecting--footer">
+    <div class="js-box-cards-products box-cards box-cards--footer"></div>
+    <div class="box-copy-writing">
+      <a href="#">
+        <img src="./static/images/logo/t-m-gray-logo-shape.svg" alt="tm-logo">
+      </a>
+      <div class="box-copy-writing__text left-space">
+        © 1999–2015 Ticketmaster. All rights reserved.
+      </div>
+    </div>
+  </div>
 
-</header>
 <script src="./dist/main.js"></script>
 </body>
 </html>

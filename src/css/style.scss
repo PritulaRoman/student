@@ -639,6 +639,15 @@
   }
 }
 
+.box-copy-writing {
+  display: flex;
+
+  &__text {
+    color: $heather-color;
+    line-height: 1.5;
+  }
+}
+
 
 
 
