@@ -13,9 +13,12 @@
 .box-link {
   padding: 27px 15px 0 15px;
   flex: 1;
+  border-top-width: 8px;
+  border-top-style: solid;
 
   &__item {
     display: none;
+    transition: color 0.2s ease;
 
     @media screen and (min-width: $break-tablet) {
       color: $heather-color;
@@ -26,10 +29,14 @@
       transition: color ease-in-out 0.2s;
     }
 
-    &--products {
+    &--active {
       color: rgba($primary-color, 0.7);
 
-      &-active {
+      &:hover {
+        color: $primary-color;
+      }
+
+      &-page {
         color: $primary-color;
       }
     }

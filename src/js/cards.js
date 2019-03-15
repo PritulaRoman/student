@@ -1,7 +1,7 @@
 import $ from "jquery";
 import axios from "axios";
 
-const getLinksCard = (cardLinks = [], linkCssClass = '', footerCssClass = '') => {
+const getLinksCard = (cardLinks = [], linkCssClass = '',  footerCssClass = '') => {
   return cardLinks.map(({title, href}) => {
     const link = `
 			<div class="card__text ${footerCssClass}">
@@ -90,17 +90,34 @@ export const buildCards = () => {
     })
     .then((response) => {
       const headerCardsData = response.data.header;
+      const isMain = location.href.includes('index.html');
+
       const headerCardes = headerCardsData.map(({title, href, color}) => {
-        const headerCard = `
-	  			<div class="box-link" style='border-top: 8px solid ${color}'>
-					<a href="${href}" class="box-link__item" >${title}</a>
-				</div>`;
-        return headerCard;
+        let itemColor = color;
+        let itemCssClass = '';
+        const isActive = location.href.includes(href);
+
+        if (!isMain) {
+          const addCssClass = isActive ? ' box-link__item--active-page' : '';
+          itemCssClass = `box-link__item--active${addCssClass}`;
+          itemColor = isActive ? 'transparent' : '#768692';
+        }
+
+        return `<div class="box-link" style='border-top-color: ${itemColor}'>
+                  <a href="./${href}" class="box-link__item ${itemCssClass}" >${title}</a>
+                </div>`;
+
       }).join('');
       $boxHeaderCards.html(headerCardes);
+      // $('.box-link')
+      //     .first()
+      //     .css('border-color', 'transparent')
+      //     .find('.box-link__item--active')
+      //     .addClass('box-link__item--active-page');
     })
 
-    .catch(() => {
+    .catch(err => {
+      console.log(err);
       $boxCards.add($boxFooterCards).html("Sorry this API not available!!!");
     });
 };
