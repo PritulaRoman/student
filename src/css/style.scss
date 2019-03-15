@@ -188,6 +188,9 @@
   .box-input {
     display: block;
     flex: 1;
+    @media screen and (min-width: $break-tablet) {
+      display: none;
+    }
   }
 }
 
@@ -211,6 +214,12 @@
     @media screen and (min-width: $break-small) {
       &__avatar,
       &__name {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: $break-tablet){
+      &__img-search {
         display: block;
       }
     }
