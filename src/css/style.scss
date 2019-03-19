@@ -180,7 +180,7 @@
       display: none;
     }
 
-    &--white {
+    &--active {
       background-image: url($img-path + "products/ic-menu-white.svg");
 
       @media screen and (min-width: $break-tablet) {
