@@ -29,6 +29,14 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
+    @media screen and (min-width: $break-small) {
+      min-height: 152px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      min-height: 208px;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -48,17 +56,6 @@
         border-bottom: 72px solid $primary-color;
         border-left: 768px solid transparent;
       }
-    }
-
-
-
-
-    @media screen and (min-width: $break-small) {
-      min-height: 152px;
-    }
-
-    @media screen and (min-width: $break-tablet) {
-      min-height: 208px;
     }
   }
 }
@@ -138,6 +135,7 @@
     background-image: url($img-path + "header/ic-search.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
     /*Products page share image*/
     &--products {
       background-image: url($img-path + "header/ic-search-primary.svg");
