@@ -25,7 +25,7 @@
         <input type="search" class="js-search box-input__item" placeholder="Search for...">
       </div>
       <div class="js-search-btn user-data__img-search user-data__img-search--products"></div>
-      <div class="user-data__item-burger"></div>
+      <div class="user-data__item-burger user-data__item-burger--active"></div>
     </div>
   </div>
 </header>
@@ -46,8 +46,11 @@
     </div>
 
     <div class="box-client">
-      <div class="box-client__title">
+      <div class="box-client__title box-client__title--desktop">
         Are you a Ticketmaster client?
+      </div>
+      <div class="box-client__title box-client__title--mobile">
+        Are you a partner?
       </div>
       <div class="box-client__text">
         Already doing business with Ticketmaster?
@@ -60,7 +63,7 @@
   <!--Connecting APIs block-->
   <div class="box-cards-connecting">
     <div class="box-cards-connecting__title">API<span class="box-cards-connecting__title--letter">s</span></div>
-    <div class="box-cards-connecting__text">Everything you need to handle event discovery,<br>commerce , accounts, orders, and fans.</div>
+    <div class="box-cards-connecting__text">Everything you need to handle event discovery, commerce , accounts, orders, and fans.</div>
     <!--Open APIs block-->
     <div class="box-item-description">
       <div class="box-article">
@@ -112,8 +115,8 @@
   <div class="box-cards-connecting box-cards-connecting--widgets">
     <div class="box-cards-connecting__title">SDKs & Widgets</div>
     <div class="box-cards-connecting__text">Easy integration? No sweat.</div>
-    <div class="box-cards">
-      <div class="card">
+    <div class="box-cards box-cards--products">
+      <div class="card card--products">
         <img src="./static/images/cards/img-account-manager.jpg" alt="account-manager" class="card__img card__img--widgets">
         <div class="card__title card__title--widgets">Account Manager</div>
         <div class="card__description card__description--widgets">
@@ -121,7 +124,7 @@
         </div>
         <button class="box-btn__item box-btn__item--product">EXPLORE SDKs</button>
       </div>
-      <div class="card">
+      <div class="card card--products">
         <img src="./static/images/cards/img-direct-payments.jpg" alt="img-direct-payments" class="card__img card__img--widgets">
         <div class="card__title card__title--widgets">Direct Payments</div>
         <div class="card__description card__description--widgets">
@@ -136,16 +139,16 @@
     <div class="box-cards-connecting__title box-cards-connecting__title--join">
       Get affiliated.
     </div>
-    <div class="box-cards-connecting__text box-cards-connecting__text--join">
+    <div class="card__description card__description--join">
       Do you have a site that attracts visitors who are interested in buying tickets? If so,
       we have an opportunity for you to monetize your site and make money through the Ticketmaster Affiliate Program.
     </div>
     <button class="box-btn__item box-btn__item--product box-btn__item--product-active">GET WIDGETIZED</button>
   </div>
   <div class="box-cards-connecting box-cards-connecting--widgets box-cards-connecting--footer">
-    <div class="js-box-cards-products box-cards box-cards--footer"></div>
+    <div class="js-box-cards-products box-cards box-cards--footer box-cards--footer-products"></div>
     <div class="box-copy-writing">
-      <a href="#">
+      <a href="index.html" class="box-copy-writing__link">
         <img src="./static/images/logo/t-m-gray-logo-shape.svg" alt="tm-logo">
       </a>
       <div class="box-copy-writing__text left-space">

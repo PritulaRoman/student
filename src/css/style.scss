@@ -13,7 +13,8 @@
 /*Header*/
 .box-bands {
   display: block;
-  @media screen and (min-width: $break-small) {
+
+  @media screen and (min-width: $break-tablet) {
 	  display: flex;
 	  justify-content: space-between;
 	  min-height: 42px;
@@ -28,6 +29,14 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
+    @media screen and (min-width: $break-small) {
+      min-height: 152px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      min-height: 208px;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -35,16 +44,18 @@
       height: 0;
       bottom: 0;
       right: 0;
-      border-bottom: 120px solid #fff;
-      border-left: 1440px solid transparent;
-    }
+      border-bottom: 34px solid $primary-color;
+      border-left: 320px solid transparent;
 
-    @media screen and (min-width: $break-small) {
-      min-height: 152px;
-    }
+      @media screen and (min-width: $break-tablet) {
+        border-bottom: 120px solid $primary-color;
+        border-left: 1440px solid transparent;
+      }
 
-    @media screen and (min-width: $break-tablet) {
-      min-height: 208px;
+      @media screen and (min-width: $break-small) {
+        border-bottom: 72px solid $primary-color;
+        border-left: 768px solid transparent;
+      }
     }
   }
 }
@@ -57,7 +68,7 @@
 .primary-bounder {
   border-top: none;
 
-  @media screen and (min-width: $break-small) {
+  @media screen and (min-width: $break-tablet) {
     border-top: 8px solid $slate-gray-color;
   }
 }
@@ -109,7 +120,7 @@
   justify-content: flex-end;
   padding: 15px;
 
-  @media screen and (min-width: $break-small) {
+  @media screen and (min-width: $break-tablet) {
     flex: 1;
     margin-top: 0;
     padding-right: 30px;
@@ -124,6 +135,7 @@
     background-image: url($img-path + "header/ic-search.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
     /*Products page share image*/
     &--products {
       background-image: url($img-path + "header/ic-search-primary.svg");
@@ -139,7 +151,7 @@
     height: 25px;
     margin-left: 23px;
 
-    @media screen and (min-width: $break-small) {
+    @media screen and (min-width: $break-tablet) {
       display: block;
     }
   }
@@ -147,7 +159,7 @@
   &__name {
     display: none;
 
-    @media screen and (min-width: $break-small) {
+    @media screen and (min-width: $break-tablet) {
       display: block;
       min-width: 104px;
       color: $cerulean-color;
@@ -164,8 +176,16 @@
     height: 24px;
     margin-left: 23px;
 
-    @media screen and (min-width: $break-small) {
+    @media screen and (min-width: $break-tablet) {
       display: none;
+    }
+
+    &--active {
+      background-image: url($img-path + "products/ic-menu-white.svg");
+
+      @media screen and (min-width: $break-tablet) {
+        display: none;
+      }
     }
   }
 }
@@ -312,8 +332,8 @@
 }
 
 .content-bounder {
+  max-width: 288px;
   margin: 0 auto;
-  max-width: 320px;
 
   @media screen and (min-width: $break-small) {
     max-width: 720px;
@@ -426,15 +446,26 @@
 
 /*Row in rectangle*/
 .box-row {
-  display: flex;
-  text-align: right;
+  display: block;
 
+  @media screen and (min-width: $break-tablet) {
+    display: flex;
+    text-align: right;
+  }
   /*Products page*/
   &--products {
     text-align: left;
     flex-wrap: nowrap;
-    margin-bottom: 72px;
+    margin-bottom: 48px;
     align-items: flex-start;
+
+    @media screen and (min-width: $break-small) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      margin-bottom: 72px;
+    }
   }
 }
 
@@ -612,36 +643,79 @@
 
 /*Main text row*/
 .box-text-wrapper {
-  max-width: 52%;
+  width: 100%;
+  @media screen and (min-width: $break-tablet) {
+    max-width: 52%;
+  }
+
 }
 .box-main-text {
-  font-size: 54px;
+  font-size: 24px;
   font-weight: 900;
   line-height: 1.19;
   color: $tundora-color;
   text-transform: uppercase;
   margin-bottom: 24px;
+
+  @media screen and (min-width: $break-small) {
+    font-size: 54px;
+  }
 }
 .box-secondary-text{
-  margin-top: -14px;
-  font-size: 24px;
+  margin-bottom: 48px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.33;
+
+  @media screen and (min-width: $break-tablet) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $break-small) {
+    font-size: 24px;
+  }
 }
 
 .box-client {
+  width: 100%;
+  padding: 38px 10px;
+  margin: 0 auto;
   border: 1px solid $link-water;
-  padding: 48px 24px;
-  max-width: calc(25% + 30px);
-  width: calc(25% + 30px);
-  margin-left: 30px;
   text-align: center;
+
+  @media screen and (min-width: $break-small) {
+    padding: 48px 24px;
+    max-width: 47%;
+
+  }
+  @media screen and (min-width: $break-tablet) {
+    max-width: calc(25% + 30px);
+    width: calc(25% + 30px);
+    margin-left: 30px;
+  }
   &__title {
     line-height: 1.33;
     font-weight: bold;
     font-size: 24px;
     color: $cerulean-color;
-    margin-bottom: 16px;
+    margin-bottom: 9px;
+
+    @media screen and (min-width: $break-tablet) {
+      margin-bottom: 16px;
+    }
+    &--desktop {
+      display: none;
+      @media screen and (min-width: $break-tablet) {
+        display: block;
+      }
+    }
+    &--mobile {
+      display: block;
+
+      @media screen and (min-width: $break-tablet) {
+        display: none;
+      }
+    }
   }
   &__text {
     line-height: 1.5;
@@ -649,12 +723,26 @@
 }
 
 .box-copy-writing {
-  display: flex;
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: $break-small) {
+    display: flex;
+  }
+
+  &__link {
+    margin-bottom: 9px;
+
+    @media screen and (min-width: $break-small) {
+      margin-bottom: 0;
+    }
+  }
 
   &__text {
     color: $heather-color;
     line-height: 1.5;
   }
+
 }
 
 

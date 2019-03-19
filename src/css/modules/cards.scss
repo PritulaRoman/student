@@ -18,6 +18,39 @@
       text-align: left;
       margin-bottom: 48px;
     }
+
+    &-products {
+      margin-bottom: 72px;
+
+      @media screen and (min-width: $break-small) {
+        margin-bottom: 74px;
+      }
+
+      @media screen and (min-width: $break-tablet) {
+        margin-bottom: 97px;
+      }
+    }
+  }
+
+  &--products {
+
+    @media screen and (min-width: $break-small) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 92px;
+    }
+
+    @media screen and (min-width: $break-tablet) {
+      margin-bottom: 120px;
+    }
+
+    .card--products:last-child {
+      margin-bottom: 93px;
+
+      @media screen and (min-width: $break-small) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -31,6 +64,7 @@
     display: flex;
     align-items: center;
     text-align: left;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $break-tablet) {
@@ -67,17 +101,17 @@
     &--widgets {
       display: block;
       width: 100%;
-      min-height: 226px;
+      height: auto;
       margin-bottom: 24px;
     }
   }
 
   &__title {
+    margin-bottom: 16px;
     color: $tundora-color;
     text-align: center;
-    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 16px;
+    line-height: 1.5;
 
     @media screen and (min-width: $break-small) {
       text-align: left;
@@ -102,6 +136,7 @@
     text-align: center;
     margin-bottom: 24px;
     line-height: 1.5;
+
     @media screen and (min-width: $break-small) {
       text-align: left;
     }
@@ -110,21 +145,26 @@
       padding: 0 25px;
       text-align: center;
     }
+
+    &--join {
+      max-width: 554px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: $primary-color;
+    }
   }
 
   &__text {
     display: inline-block;
     margin: 0 10px;
 
-    @media screen and (min-width: $break-tablet) {
-      display: block;
-      margin: 0 0 16px 0;
-    }
-
     @media screen and (min-width: $break-small) {
       &:first-child {
         margin-left: 0;
       }
+
+      display: block;
+      margin: 0 0 16px 0;
     }
 
     &--link-footer {
@@ -176,6 +216,18 @@
       flex-direction: column;
       flex: 1;
       align-items: flex-start;
+    }
+  }
+
+  &--products {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto 72px;
+
+    @media screen and (min-width: $break-small) {
+      max-width: 49%;
+      margin: 0;
     }
   }
 }
