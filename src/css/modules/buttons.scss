@@ -79,7 +79,13 @@
       font-size: 16px;
       padding: 14px 24px 10px;
       margin: 0 auto;
+      max-width: 184px;
+
+      &:nth-child(n) {
+        display: block;
+      }
       &-active {
+        width: 215px;
         color: $scampi-color;
         background: $primary-color;
       }

@@ -24,6 +24,8 @@ export const buildCards = () => {
   const $boxFooterProductsCards = $('.js-box-cards-products');
 
 
+
+
   axios.get('https://jsonblob.com/api/1c066a98-2fd6-11e9-9080-df955f1091f2')
     .then((response) => {
       const result = response.data.items;
@@ -96,11 +98,15 @@ export const buildCards = () => {
         let itemColor = color;
         let itemCssClass = '';
         const isActive = location.href.includes(href);
+        const $windowWidth = $(window).width();
 
         if (!isMain) {
           const addCssClass = isActive ? ' box-link__item--active-page' : '';
           itemCssClass = `box-link__item--active${addCssClass}`;
-          itemColor = isActive ? 'transparent' : '#768692';
+
+          if($windowWidth >= '1024') {
+            itemColor = isActive ? 'transparent' : '#768692';
+          }
         }
 
         return `<div class="box-link" style='border-top-color: ${itemColor}'>
