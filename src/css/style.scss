@@ -2,13 +2,15 @@
 @import 'modules/fonts';
 @import 'modules/base';
 
-
-
 // Modules
 @import 'modules/main-menu';
 @import 'modules/buttons';
 @import 'modules/cards';
 @import 'modules/cards-connecting';
+
+body {
+  color: red;
+}
 
 /*Header*/
 .box-bands {
@@ -472,6 +474,7 @@
 .rectangle__text {
   max-width: 50%;
   width: 50%;
+  padding: 4px;
 }
 
 .rectangle__score {
